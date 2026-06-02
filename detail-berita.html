@@ -159,65 +159,56 @@
   >
     <!-- TopNavBar -->
     <header
-      class="bg-surface border-b border-outline-variant shadow-sm sticky top-0 z-50"
+      class="bg-surface-container-lowest dark:bg-inverse-surface border-b border-outline-variant dark:border-outline shadow-sm full-width top-0 z-50 sticky"
     >
       <div
-        class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-20"
+        class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto"
       >
-        <div
-          class="font-headline-md text-headline-md font-bold text-primary flex items-center gap-2"
-        >
+        <div class="flex items-center gap-4">
           <img
             alt="FKDK BPDSI Logo"
-            class="h-12 w-auto"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1ehEZl3dH6Vcw7e4Emb07nR73uMloBBvPyhZNqXBWGjyVHdaSWfIIdEZKBvgGBoQH82y9umOxxeUO6CjVsTqwViqlydyyYrGbZ0uyAIVaXsDslhSZ3o9PWb7Zjr34v3w4KNu-GTjyGvdyYhKLKPCPLKyPjMv2uaf6AeGl6xj5f7LFiho9fNyUgGfZNdjL5tBakJQTSLFaHlMjVqEG44RpRwMjw1mKoH-uc0UShfaKJsQrMDsl7K9DZCXiNiYu4diWc-cr3pIIyaY1"
+            class="h-12 w-auto object-contain"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1PC0wAEUkj0BJtE6OwlxnZTIV3foLvwNybroeHGfLOMHCBWZZI3d_k75MQ0fU9FWsheRzRdrSzADsFKSTjITpw9Sl-hN5snzP1eA65Qa3KnkNyCW4CE1VFHUM2vFvfyl9xrSqQkPjtzi-ON2msw2srjQTzM100IE6f-jvYV8zDYvTBW4_FuNEubE4ChuslsobP1b1FIPYOvVMQ4oU8djktfHnPdoUDSWEIFFpbBWhJRs_4EQBMHkXi51xw6Go_nycZ0NyrClESfK2"
           />
-          <span class="hidden md:inline">FKDK BPDSI</span>
+          <span
+            class="font-display-lg text-headline-md font-bold text-primary dark:text-primary-fixed hidden sm:block"
+            >FKDK BPDSI WilTim Squad</span
+          >
         </div>
-        <nav class="hidden md:flex items-center gap-6">
+        <nav class="hidden lg:flex items-center gap-8 h-full">
           <a
-            class="text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-container-low px-3 py-2 rounded-lg font-label-sm text-label-sm"
-            href="#"
+            class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 scale-100 active:scale-95 transition-transform"
+            href="index.html"
             >Beranda</a
           >
           <a
-            class="text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-container-low px-3 py-2 rounded-lg font-label-sm text-label-sm"
-            href="#"
+            class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 scale-100 active:scale-95 transition-transform"
+            href="tokoh.html"
             >Profil Tokoh</a
           >
           <a
-            class="text-primary border-b-2 border-secondary font-bold pb-1 px-3 py-2 font-label-sm text-label-sm"
-            href="#"
+            class="font-body-md text-body-md text-primary dark:text-secondary-fixed-dim border-b-2 border-secondary font-semibold hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 scale-100 active:scale-95 transition-transform"
+            href="berita.html"
             >Berita</a
           >
           <a
-            class="text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-container-low px-3 py-2 rounded-lg font-label-sm text-label-sm"
+            class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 scale-100 active:scale-95 transition-transform"
             href="video.html"
             >Video</a
           >
           <a
-            class="text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-container-low px-3 py-2 rounded-lg font-label-sm text-label-sm"
-            href="#"
-            >Kegiatan</a
-          >
-          <a
-            class="text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-container-low px-3 py-2 rounded-lg font-label-sm text-label-sm"
-            href="#"
-            >Tentang Kami</a
+            class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 scale-100 active:scale-95 transition-transform"
+            href="kegiatan.html"
+            >Galleri Kegiatan</a
           >
         </nav>
         <div class="flex items-center gap-4">
           <button
-            class="text-on-surface-variant hover:text-primary transition-colors"
+            class="bg-primary text-on-primary px-6 py-2 rounded-lg font-semibold hover:opacity-90 transition-opacity"
           >
-            <span class="material-symbols-outlined">search</span>
+            Hubungi Kami
           </button>
-          <a
-            class="hidden md:flex items-center justify-center bg-primary text-on-primary px-6 py-2 rounded-full font-label-sm text-label-sm hover:bg-primary-container transition-colors"
-            href="#"
-            >Login Anggota</a
-          >
-          <button class="md:hidden text-on-surface-variant">
+          <button class="lg:hidden text-on-surface p-2">
             <span class="material-symbols-outlined">menu</span>
           </button>
         </div>
