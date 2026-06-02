@@ -1,0 +1,1039 @@
+<!doctype html>
+<html lang="id" style="">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Bank Papua Detail</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&amp;family=Manrope:wght@600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      .watermark {
+        background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDEZXKLVckxoZ-LBUS7O3DejcCBgdlDnTNUlJxw7Ngqi2MAMR6x6tWjk-0arxWwIAF53ScyngBxmldBwe3K9wik1Te764JK8Ssn0WJnev-6Kh0ujVg-LpCLjID9UjItPqi4_JG3GfLQtvjquWcqJmsta4FsrIAUGYrt5yhcjDXeBJQaVcDcQ_uE09JDqJps4J2If7qywdr7xsxgJXmookaMWEEv1FH3pvbNhx1PPc0uCX44mjNgk2KuHrToebrqxEtOK0vYh_WCBHy1");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 50%;
+        opacity: 0.05;
+        pointer-events: none;
+        z-index: 0;
+      }
+      .content-layer {
+        position: relative;
+        z-index: 10;
+      }
+    </style>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed-dim": "#95ceef",
+              "tertiary-fixed": "#c3e8ff",
+              "on-primary": "#ffffff",
+              "surface-container-low": "#f3f3f6",
+              outline: "#747782",
+              "on-secondary-container": "#785a20",
+              "on-tertiary-container": "#8ec7e8",
+              "primary-fixed-dim": "#afc6ff",
+              "on-secondary": "#ffffff",
+              "surface-tint": "#335cab",
+              "surface-container": "#eeeef0",
+              "on-primary-fixed-variant": "#124392",
+              "on-surface-variant": "#434651",
+              "on-secondary-fixed": "#271900",
+              secondary: "#77591f",
+              "on-tertiary": "#ffffff",
+              "inverse-surface": "#2f3133",
+              "surface-container-lowest": "#ffffff",
+              "primary-container": "#1e4b9a",
+              "outline-variant": "#c3c6d3",
+              "surface-variant": "#e2e2e5",
+              "secondary-fixed-dim": "#e9c17c",
+              "on-tertiary-fixed": "#001e2c",
+              "secondary-fixed": "#ffdea8",
+              background: "#f9f9fc",
+              "on-background": "#1a1c1e",
+              "on-secondary-fixed-variant": "#5d4208",
+              "secondary-container": "#fdd48e",
+              "on-surface": "#1a1c1e",
+              "inverse-on-surface": "#f0f0f3",
+              "on-error": "#ffffff",
+              "primary-fixed": "#d9e2ff",
+              "error-container": "#ffdad6",
+              "surface-container-highest": "#e2e2e5",
+              "on-primary-container": "#a5bfff",
+              error: "#ba1a1a",
+              "tertiary-container": "#0d5471",
+              "surface-dim": "#dadadc",
+              "on-primary-fixed": "#001944",
+              "on-error-container": "#93000a",
+              tertiary: "#003c53",
+              "surface-bright": "#f9f9fc",
+              primary: "#00347b",
+              "surface-container-high": "#e8e8ea",
+              "inverse-primary": "#afc6ff",
+              "on-tertiary-fixed-variant": "#004c68",
+              surface: "#f9f9fc",
+            },
+            borderRadius: {
+              DEFAULT: "0.125rem",
+              lg: "0.25rem",
+              xl: "0.5rem",
+              full: "0.75rem",
+            },
+            spacing: {
+              gutter: "24px",
+              "container-max": "1280px",
+              "margin-mobile": "20px",
+              unit: "8px",
+              "margin-desktop": "64px",
+            },
+            fontFamily: {
+              "display-lg": ["Manrope"],
+              "body-lg": ["IBM Plex Sans"],
+              "body-md": ["IBM Plex Sans"],
+              "headline-lg-mobile": ["Manrope"],
+              "headline-lg": ["Manrope"],
+              "label-sm": ["IBM Plex Sans"],
+              "headline-md": ["Manrope"],
+            },
+            fontSize: {
+              "display-lg": [
+                "48px",
+                {
+                  lineHeight: "56px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+              "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+              "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+              "headline-lg-mobile": [
+                "24px",
+                { lineHeight: "32px", fontWeight: "600" },
+              ],
+              "headline-lg": [
+                "32px",
+                { lineHeight: "40px", fontWeight: "600" },
+              ],
+              "label-sm": [
+                "12px",
+                {
+                  lineHeight: "16px",
+                  letterSpacing: "0.05em",
+                  fontWeight: "600",
+                },
+              ],
+              "headline-md": [
+                "24px",
+                { lineHeight: "32px", fontWeight: "600" },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-background font-body-md text-on-background antialiased relative"
+  >
+    <!-- TopNavBar -->
+    <header
+      class="bg-surface-container-lowest dark:bg-inverse-surface border-b border-outline-variant dark:border-outline shadow-sm full-width top-0 z-50 sticky"
+    >
+      <div
+        class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto"
+      >
+        <div class="flex items-center gap-4">
+          <img
+            alt="FKDK BPDSI Logo"
+            class="h-12 w-auto object-contain"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1PC0wAEUkj0BJtE6OwlxnZTIV3foLvwNybroeHGfLOMHCBWZZI3d_k75MQ0fU9FWsheRzRdrSzADsFKSTjITpw9Sl-hN5snzP1eA65Qa3KnkNyCW4CE1VFHUM2vFvfyl9xrSqQkPjtzi-ON2msw2srjQTzM100IE6f-jvYV8zDYvTBW4_FuNEubE4ChuslsobP1b1FIPYOvVMQ4oU8djktfHnPdoUDSWEIFFpbBWhJRs_4EQBMHkXi51xw6Go_nycZ0NyrClESfK2"
+          />
+          <span
+            class="font-display-lg text-headline-md font-bold text-primary dark:text-primary-fixed hidden sm:block"
+            >FKDK BPDSI WilTim Squad</span
+          >
+        </div>
+        <nav class="hidden lg:flex items-center gap-8 h-full">
+          <a
+            class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 scale-100 active:scale-95 transition-transform"
+            href="index.html"
+            >Beranda</a
+          >
+          <a
+            class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 scale-100 active:scale-95 transition-transform"
+            href="tokoh.html"
+            >Profil Tokoh</a
+          >
+          <a
+            class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 scale-100 active:scale-95 transition-transform"
+            href="berita.html"
+            >Berita</a
+          >
+          <a
+            class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 scale-100 active:scale-95 transition-transform"
+            href="video.html"
+            >Video</a
+          >
+          <a
+            class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 scale-100 active:scale-95 transition-transform"
+            href="kegiatan.html"
+            >Galleri Kegiatan</a
+          >
+        </nav>
+        <div class="flex items-center gap-4">
+          <button
+            class="bg-primary text-on-primary px-6 py-2 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+          >
+            Hubungi Kami
+          </button>
+          <button class="lg:hidden text-on-surface p-2">
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- Main Content -->
+    <main class="pb-24 relative overflow-hidden">
+      <!-- Global Watermark -->
+      <div
+        class="absolute inset-0 watermark fixed top-0 left-0 w-full h-full pointer-events-none"
+      ></div>
+      <!-- Hero Section -->
+      <section
+        class="relative h-[60vh] min-h-[500px] flex items-center justify-center bg-primary-fixed content-layer"
+      >
+        <div class="absolute inset-0 w-full h-full">
+          <img
+            alt="Bank Papua headquarters building"
+            class="w-full h-full object-cover object-center opacity-80"
+            data-alt="A striking architectural photograph of the Bank Papua headquarters building during daytime. The modern glass and steel structure stands tall against a clear blue sky, exuding a sense of national stability and institutional authority. The lighting is bright and natural, highlighting the corporate blue tones of the facade."
+            src="https://lh3.googleusercontent.com/aida/ADBb0ugbsNPS3tnDImGEaNGLRkJ_CIZ7QT0vKj9jbAVsKWxWG1pL7MbF_BsZQcURR56zVsSTLAU0ofh05F1ALq-ti6YARlctRPFYojsdkGnivSTAFs6Y1kcfxXwvTmkbD4B2K2ZJPhMHANh44kLreycTUz9bOtNHU3WtikEVHUDIsKQg0alCmoIqhm_XsT4fdtm_tLOspHOJEMl_SeJSenYFpinlqR37ryYsRGF2ctQDcakbWBZRZA3GPJ3QD7M"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-primary/90 to-primary/40"
+          ></div>
+        </div>
+        <div
+          class="relative z-10 w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center md:text-left flex flex-col items-center md:items-start"
+        >
+          <img
+            alt="Bank Papua Logo"
+            class="w-32 h-32 md:w-48 md:h-48 mb-8 object-contain drop-shadow-lg"
+            data-alt="The official logo of Bank Papua, rendered in crisp high resolution. The logo features a professional color palette of deep blue and white, reflecting trust and reliability. It is presented against a transparent background to blend seamlessly with the corporate aesthetic."
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvhjJ-ZVfwBs38zcjPb4R7xc5iX2H6X3xEY2M4WlKNuUPGkfdUwBrcdPgpcKmHLrl5K-kw7wjxxjRdSr9LZdoTFLxoFsdk3ruy-6viwb7eInniR1XXvN9L38qXQ9gRdDWoO2YBZZYqhAlcKBe2wMORhz1ngWiNt-shpfu2AuR1FkhlewvathE_52lAotUiOoMBD9nOSa4jfXlHEdoyzwjSg_Y6bc4L8kRCW_1DtMam8W8UhYW-WJruUOMWifLIf05Zqfo6aJkfoZEg"
+          />
+          <h1
+            class="font-display-lg text-display-lg text-on-primary mb-4 shadow-sm"
+          >
+            PT Bank Pembangunan Daerah Papua
+          </h1>
+          <p
+            class="font-headline-lg text-headline-lg text-secondary-fixed mb-8"
+          >
+            Membangun Tanah Papua
+          </p>
+          <div class="flex gap-4">
+            <button
+              class="bg-on-primary text-primary px-8 py-3 rounded-lg font-body-md font-bold hover:bg-surface-container-low transition-colors shadow-sm"
+            >
+              Kunjungi Website
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- History Section -->
+      <section
+        class="py-16 md:py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto content-layer relative"
+      >
+        <div class="flex flex-col md:flex-row gap-12 items-start">
+          <div class="w-full md:w-1/3 sticky top-32">
+            <h2
+              class="font-headline-lg text-headline-lg text-primary border-b-2 border-secondary pb-4 mb-4 inline-block"
+            >
+              Sejarah Singkat
+            </h2>
+            <p class="font-body-md text-on-surface-variant leading-relaxed">
+              Perjalanan panjang Bank Papua dalam mendukung pembangunan ekonomi
+              di ujung timur Indonesia, berawal dari semangat untuk mewujudkan
+              kemandirian daerah.
+            </p>
+          </div>
+          <div
+            class="w-full md:w-2/3 bg-surface p-8 md:p-12 rounded-xl border border-outline-variant shadow-[0px_4px_20px_rgba(30,75,154,0.08)] relative overflow-hidden"
+          >
+            <div class="absolute top-0 right-0 p-8 opacity-10">
+              <span class="material-symbols-outlined text-[120px] text-primary"
+                >history_edu</span
+              >
+            </div>
+            <div class="space-y-8 relative z-10">
+              <div class="relative pl-8 border-l-2 border-secondary-fixed-dim">
+                <div
+                  class="absolute w-4 h-4 bg-primary rounded-full -left-[9px] top-1"
+                ></div>
+                <h3 class="font-headline-md text-headline-md text-primary mb-2">
+                  1966: Pendirian
+                </h3>
+                <p class="font-body-md text-on-surface-variant">
+                  PT Bank Pembangunan Daerah Papua didirikan pada tahun 1966
+                  dengan tujuan utama untuk membantu dan mendorong pertumbuhan
+                  ekonomi dan pembangunan daerah di segala bidang serta sebagai
+                  salah satu sumber pendapatan daerah dalam rangka meningkatkan
+                  taraf hidup rakyat.
+                </p>
+              </div>
+              <div class="relative pl-8 border-l-2 border-secondary-fixed-dim">
+                <div
+                  class="absolute w-4 h-4 bg-primary rounded-full -left-[9px] top-1"
+                ></div>
+                <h3 class="font-headline-md text-headline-md text-primary mb-2">
+                  Perkembangan BPD
+                </h3>
+                <p class="font-body-md text-on-surface-variant">
+                  Seiring dengan dinamika pembangunan daerah, Bank Papua terus
+                  bertransformasi dari sekadar kasir pemerintah daerah menjadi
+                  bank komersial yang berdaya saing, melayani berbagai lapisan
+                  masyarakat dan sektor usaha di Tanah Papua.
+                </p>
+              </div>
+              <div class="relative pl-8 border-l-2 border-secondary-fixed-dim">
+                <div
+                  class="absolute w-4 h-4 bg-primary rounded-full -left-[9px] top-1"
+                ></div>
+                <h3 class="font-headline-md text-headline-md text-primary mb-2">
+                  2013: Status Perseroan Terbatas
+                </h3>
+                <p class="font-body-md text-on-surface-variant">
+                  Pada tahun 2013, berdasarkan Perda Nomor 6 Tahun 2013, bentuk
+                  badan hukum Bank Papua resmi berubah menjadi Perseroan
+                  Terbatas (PT), menandai babak baru dalam tata kelola
+                  perusahaan yang lebih profesional dan berorientasi bisnis.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Vision & Mission -->
+      <section class="py-16 md:py-24 bg-surface-container-low content-layer">
+        <div
+          class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop"
+        >
+          <div class="text-center mb-16">
+            <h2
+              class="font-headline-lg text-headline-lg text-primary border-b-2 border-secondary pb-4 mb-4 inline-block"
+            >
+              Visi &amp; Misi
+            </h2>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- Visi -->
+            <div
+              class="bg-primary text-on-primary p-8 md:p-12 rounded-xl shadow-[0px_4px_20px_rgba(30,75,154,0.08)]"
+            >
+              <div class="flex items-center gap-4 mb-6">
+                <span
+                  class="material-symbols-outlined text-[40px] text-secondary-fixed"
+                  >visibility</span
+                >
+                <h3 class="font-headline-lg text-headline-lg">Visi</h3>
+              </div>
+              <p
+                class="font-body-lg text-body-lg font-bold mb-8 text-secondary-fixed"
+              >
+                "Menjadi Bank Regional yang kuat, terpercaya, berdaya saing, dan
+                mendukung pembangunan ekonomi di Tanah Papua."
+              </p>
+              <div class="space-y-4">
+                <div class="bg-on-primary/10 p-4 rounded-lg">
+                  <h4
+                    class="font-headline-md text-headline-md text-secondary-fixed mb-2"
+                  >
+                    Kuat
+                  </h4>
+                  <p class="font-body-sm text-on-primary/90">
+                    Memiliki fundamental keuangan yang kokoh dan tahan terhadap
+                    fluktuasi ekonomi.
+                  </p>
+                </div>
+                <div class="bg-on-primary/10 p-4 rounded-lg">
+                  <h4
+                    class="font-headline-md text-headline-md text-secondary-fixed mb-2"
+                  >
+                    Terpercaya
+                  </h4>
+                  <p class="font-body-sm text-on-primary/90">
+                    Menjadi mitra utama yang diandalkan oleh masyarakat dan
+                    pemerintah daerah.
+                  </p>
+                </div>
+                <div class="bg-on-primary/10 p-4 rounded-lg">
+                  <h4
+                    class="font-headline-md text-headline-md text-secondary-fixed mb-2"
+                  >
+                    Berdaya Saing
+                  </h4>
+                  <p class="font-body-sm text-on-primary/90">
+                    Mampu memberikan layanan terbaik yang setara dengan bank
+                    nasional terkemuka.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Misi -->
+            <div
+              class="bg-surface p-8 md:p-12 rounded-xl border border-outline-variant shadow-[0px_4px_20px_rgba(30,75,154,0.08)]"
+            >
+              <div
+                class="flex items-center gap-4 mb-8 border-b border-outline-variant pb-6"
+              >
+                <span class="material-symbols-outlined text-[40px] text-primary"
+                  >flag</span
+                >
+                <h3 class="font-headline-lg text-headline-lg text-primary">
+                  Misi
+                </h3>
+              </div>
+              <div class="grid grid-cols-1 gap-6">
+                <div
+                  class="flex gap-4 items-start p-4 hover:bg-surface-container-low rounded-lg transition-colors border border-transparent hover:border-outline-variant"
+                >
+                  <div
+                    class="bg-tertiary-fixed-dim w-10 h-10 rounded-full flex items-center justify-center shrink-0"
+                  >
+                    <span class="font-headline-md text-primary">1</span>
+                  </div>
+                  <div>
+                    <h4 class="font-headline-md text-on-surface mb-2">
+                      Mendorong Pembangunan Ekonomi
+                    </h4>
+                    <p class="font-body-sm text-on-surface-variant">
+                      Berperan aktif sebagai pendorong pertumbuhan ekonomi
+                      daerah, menggerakkan sektor riil, dan mendukung program
+                      strategis pemerintah daerah di Tanah Papua.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex gap-4 items-start p-4 hover:bg-surface-container-low rounded-lg transition-colors border border-transparent hover:border-outline-variant"
+                >
+                  <div
+                    class="bg-tertiary-fixed-dim w-10 h-10 rounded-full flex items-center justify-center shrink-0"
+                  >
+                    <span class="font-headline-md text-primary">2</span>
+                  </div>
+                  <div>
+                    <h4 class="font-headline-md text-on-surface mb-2">
+                      Sumber Pendapatan Daerah
+                    </h4>
+                    <p class="font-body-sm text-on-surface-variant">
+                      Mengelola dana daerah secara optimal untuk memberikan
+                      kontribusi yang signifikan terhadap Pendapatan Asli Daerah
+                      (PAD) guna mendukung kemandirian fiskal.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex gap-4 items-start p-4 hover:bg-surface-container-low rounded-lg transition-colors border border-transparent hover:border-outline-variant"
+                >
+                  <div
+                    class="bg-tertiary-fixed-dim w-10 h-10 rounded-full flex items-center justify-center shrink-0"
+                  >
+                    <span class="font-headline-md text-primary">3</span>
+                  </div>
+                  <div>
+                    <h4 class="font-headline-md text-on-surface mb-2">
+                      Layanan Perbankan Terbaik
+                    </h4>
+                    <p class="font-body-sm text-on-surface-variant">
+                      Menyediakan produk dan layanan perbankan yang inovatif,
+                      aman, dan mudah diakses untuk memenuhi kebutuhan transaksi
+                      dan pembiayaan seluruh nasabah.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex gap-4 items-start p-4 hover:bg-surface-container-low rounded-lg transition-colors border border-transparent hover:border-outline-variant"
+                >
+                  <div
+                    class="bg-tertiary-fixed-dim w-10 h-10 rounded-full flex items-center justify-center shrink-0"
+                  >
+                    <span class="font-headline-md text-primary">4</span>
+                  </div>
+                  <div>
+                    <h4 class="font-headline-md text-on-surface mb-2">
+                      Kesejahteraan Karyawan &amp; Pemegang Saham
+                    </h4>
+                    <p class="font-body-sm text-on-surface-variant">
+                      Meningkatkan nilai perusahaan (corporate value) secara
+                      berkelanjutan guna memberikan manfaat maksimal bagi
+                      kesejahteraan karyawan dan dividen bagi pemegang saham.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Corporate Identity & Facts -->
+      <section
+        class="py-16 md:py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto content-layer"
+      >
+        <div class="text-center mb-16">
+          <h2
+            class="font-headline-lg text-headline-lg text-primary border-b-2 border-secondary pb-4 mb-4 inline-block"
+          >
+            Identitas Perusahaan
+          </h2>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <!-- Info Cards -->
+          <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div
+              class="bg-surface p-6 rounded-xl border border-outline-variant flex gap-4 items-start shadow-sm"
+            >
+              <span
+                class="material-symbols-outlined text-[32px] text-primary shrink-0"
+                >account_balance</span
+              >
+              <div>
+                <h4
+                  class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1"
+                >
+                  Status Perusahaan
+                </h4>
+                <p class="font-body-lg text-on-surface font-semibold">
+                  Badan Usaha Milik Daerah (BUMD)
+                </p>
+              </div>
+            </div>
+            <div
+              class="bg-surface p-6 rounded-xl border border-outline-variant flex gap-4 items-start shadow-sm"
+            >
+              <span
+                class="material-symbols-outlined text-[32px] text-primary shrink-0"
+                >groups</span
+              >
+              <div>
+                <h4
+                  class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1"
+                >
+                  Kepemilikan Saham
+                </h4>
+                <p class="font-body-lg text-on-surface font-semibold">
+                  Seri A &amp; Seri B
+                </p>
+              </div>
+            </div>
+            <div
+              class="bg-surface p-6 rounded-xl border border-outline-variant flex gap-4 items-start shadow-sm"
+            >
+              <span
+                class="material-symbols-outlined text-[32px] text-primary shrink-0"
+                >monetization_on</span
+              >
+              <div>
+                <h4
+                  class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1"
+                >
+                  Modal Dasar
+                </h4>
+                <p class="font-body-lg text-on-surface font-semibold">
+                  Rp 4.000.000.000.000
+                </p>
+              </div>
+            </div>
+            <div
+              class="bg-surface p-6 rounded-xl border border-outline-variant flex gap-4 items-start shadow-sm"
+            >
+              <span
+                class="material-symbols-outlined text-[32px] text-primary shrink-0"
+                >payments</span
+              >
+              <div>
+                <h4
+                  class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-1"
+                >
+                  Modal Disetor
+                </h4>
+                <p class="font-body-lg text-on-surface font-semibold text-sm">
+                  Sesuai Laporan Keuangan Terakhir
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Contact Card -->
+          <div
+            class="bg-primary text-on-primary p-8 rounded-xl shadow-[0px_4px_20px_rgba(30,75,154,0.08)]"
+          >
+            <h3
+              class="font-headline-md text-headline-md text-secondary-fixed mb-6 border-b border-on-primary/20 pb-4"
+            >
+              Kantor Pusat
+            </h3>
+            <ul class="space-y-6">
+              <li class="flex gap-4 items-start">
+                <span
+                  class="material-symbols-outlined text-[24px] text-on-primary/80 shrink-0 mt-1"
+                  >location_on</span
+                >
+                <p class="font-body-md">
+                  Jl. Percetakan Negara No.2,<br />Jayapura, Papua
+                </p>
+              </li>
+              <li class="flex gap-4 items-center">
+                <span
+                  class="material-symbols-outlined text-[24px] text-on-primary/80 shrink-0"
+                  >call</span
+                >
+                <p class="font-body-md">(0967) 532011</p>
+              </li>
+              <li class="flex gap-4 items-center">
+                <span
+                  class="material-symbols-outlined text-[24px] text-on-primary/80 shrink-0"
+                  >mail</span
+                >
+                <p class="font-body-md">corsec@bankpapua.co.id</p>
+              </li>
+              <li class="flex gap-4 items-center">
+                <span
+                  class="material-symbols-outlined text-[24px] text-on-primary/80 shrink-0"
+                  >language</span
+                >
+                <p class="font-body-md">www.bankpapua.co.id</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- Goals & Strategy -->
+      <section
+        class="py-16 md:py-24 bg-surface-container-highest content-layer border-t border-outline-variant"
+      >
+        <div
+          class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop"
+        >
+          <div class="mb-16">
+            <h2
+              class="font-headline-lg text-headline-lg text-primary border-b-2 border-secondary pb-4 mb-4 inline-block"
+            >
+              Fokus &amp; Strategi
+            </h2>
+            <p class="font-body-lg text-on-surface-variant max-w-3xl mt-4">
+              Panduan strategis untuk mencapai visi dan misi Bank Papua dalam
+              mendukung pertumbuhan ekonomi daerah secara berkelanjutan.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <!-- Tujuan -->
+            <div>
+              <div class="flex items-center gap-3 mb-8">
+                <span
+                  class="material-symbols-outlined text-[32px] text-secondary"
+                  >track_changes</span
+                >
+                <h3 class="font-headline-md text-headline-md text-on-surface">
+                  6 Fokus Utama
+                </h3>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div
+                  class="bg-surface p-4 rounded-lg border border-outline-variant flex gap-3 items-center shadow-sm"
+                >
+                  <span
+                    class="material-symbols-outlined text-primary text-[20px]"
+                    >check_circle</span
+                  >
+                  <span class="font-body-md font-semibold text-on-surface"
+                    >Pertumbuhan Laba</span
+                  >
+                </div>
+                <div
+                  class="bg-surface p-4 rounded-lg border border-outline-variant flex gap-3 items-center shadow-sm"
+                >
+                  <span
+                    class="material-symbols-outlined text-primary text-[20px]"
+                    >check_circle</span
+                  >
+                  <span class="font-body-md font-semibold text-on-surface"
+                    >Efisiensi Operasional</span
+                  >
+                </div>
+                <div
+                  class="bg-surface p-4 rounded-lg border border-outline-variant flex gap-3 items-center shadow-sm"
+                >
+                  <span
+                    class="material-symbols-outlined text-primary text-[20px]"
+                    >check_circle</span
+                  >
+                  <span class="font-body-md font-semibold text-on-surface"
+                    >Kualitas Aset</span
+                  >
+                </div>
+                <div
+                  class="bg-surface p-4 rounded-lg border border-outline-variant flex gap-3 items-center shadow-sm"
+                >
+                  <span
+                    class="material-symbols-outlined text-primary text-[20px]"
+                    >check_circle</span
+                  >
+                  <span class="font-body-md font-semibold text-on-surface"
+                    >SDM Profesional</span
+                  >
+                </div>
+                <div
+                  class="bg-surface p-4 rounded-lg border border-outline-variant flex gap-3 items-center shadow-sm"
+                >
+                  <span
+                    class="material-symbols-outlined text-primary text-[20px]"
+                    >check_circle</span
+                  >
+                  <span class="font-body-md font-semibold text-on-surface"
+                    >Layanan Digital</span
+                  >
+                </div>
+                <div
+                  class="bg-surface p-4 rounded-lg border border-outline-variant flex gap-3 items-center shadow-sm"
+                >
+                  <span
+                    class="material-symbols-outlined text-primary text-[20px]"
+                    >check_circle</span
+                  >
+                  <span class="font-body-md font-semibold text-on-surface"
+                    >Tata Kelola BPD</span
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Strategi -->
+            <div>
+              <div class="flex items-center gap-3 mb-8">
+                <span
+                  class="material-symbols-outlined text-[32px] text-secondary"
+                  >strategy</span
+                >
+                <h3 class="font-headline-md text-headline-md text-on-surface">
+                  5 Langkah Strategis
+                </h3>
+              </div>
+              <ul class="space-y-4">
+                <li
+                  class="flex gap-4 p-4 bg-surface rounded-lg border-l-4 border-primary shadow-sm"
+                >
+                  <span
+                    class="font-headline-md text-primary font-bold opacity-50"
+                    >01</span
+                  >
+                  <p class="font-body-md text-on-surface">
+                    Penguatan Struktur Permodalan untuk menopang ekspansi
+                    bisnis.
+                  </p>
+                </li>
+                <li
+                  class="flex gap-4 p-4 bg-surface rounded-lg border-l-4 border-primary shadow-sm"
+                >
+                  <span
+                    class="font-headline-md text-primary font-bold opacity-50"
+                    >02</span
+                  >
+                  <p class="font-body-md text-on-surface">
+                    Transformasi Digital dan Peningkatan Layanan IT berbasis
+                    nasabah.
+                  </p>
+                </li>
+                <li
+                  class="flex gap-4 p-4 bg-surface rounded-lg border-l-4 border-primary shadow-sm"
+                >
+                  <span
+                    class="font-headline-md text-primary font-bold opacity-50"
+                    >03</span
+                  >
+                  <p class="font-body-md text-on-surface">
+                    Pengembangan SDM dan Budaya Kerja Berkinerja Tinggi.
+                  </p>
+                </li>
+                <li
+                  class="flex gap-4 p-4 bg-surface rounded-lg border-l-4 border-primary shadow-sm"
+                >
+                  <span
+                    class="font-headline-md text-primary font-bold opacity-50"
+                    >04</span
+                  >
+                  <p class="font-body-md text-on-surface">
+                    Penerapan Manajemen Risiko yang komprehensif dan prudent.
+                  </p>
+                </li>
+                <li
+                  class="flex gap-4 p-4 bg-surface rounded-lg border-l-4 border-primary shadow-sm"
+                >
+                  <span
+                    class="font-headline-md text-primary font-bold opacity-50"
+                    >05</span
+                  >
+                  <p class="font-body-md text-on-surface">
+                    Peningkatan Sinergi dengan Pemerintah Daerah dan BUMD
+                    lainnya.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="py-16 md:py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto content-layer border-t border-outline-variant"
+      >
+        <div class="text-center mb-16">
+          <h2
+            class="font-headline-lg text-headline-lg text-primary border-b-2 border-secondary pb-4 mb-4 inline-block"
+          >
+            Dewan Komisaris
+          </h2>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Card 2 -->
+          <div
+            class="bg-surface rounded-xl overflow-hidden border border-outline-variant shadow-sm transition-transform hover:-translate-y-1"
+          >
+            <div class="aspect-[3/4] overflow-hidden">
+              <img
+                alt="Arobi Ahmad Aituarauw"
+                class="w-full h-full object-cover object-top"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsHcUx6sNYuL8qiB-LqCS7TcU9mAbGb2Hmfl44Vf2I9Ez_KyLXjV5423kG5_JypLVqQAtwVpXTpQAEfaQnWbt5ouccoEQ6PI-knbGiC9Nto_Gfu8_U5KD77GRGSyN2V75VYgiVAKBC-QyW8v7tj7g32o3_E60LmZO_8V2e7IcKCHRSLDKE7aQsj3oqo6A-6LUoDroZg3t3cyr1mSAapkNVg4Wq8QPpm0LSGJ2MiRKNQ4Vlqz2CLmWAKWClYokRbendyn0gxScgUEt9"
+              />
+            </div>
+            <div class="p-6 text-center">
+              <h3 class="font-headline-md text-primary mb-1">
+                Arobi Ahmad Aituarauw
+              </h3>
+              <p class="font-body-md text-on-surface-variant">
+                Komisaris Utama
+              </p>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div
+            class="bg-surface rounded-xl overflow-hidden border border-outline-variant shadow-sm transition-transform hover:-translate-y-1"
+          >
+            <div class="aspect-[3/4] overflow-hidden">
+              <img
+                alt="Victor Abraham Abaidata"
+                class="w-full h-full object-cover object-top"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRVZlMCNapsOSpEuoRPFI-ENWcsqck3jVAFes7dWv-7llfdaWidnpB0dyKYgcPBWsnPdkZqWChadNe1tEJiuschaCHKdvNOpXRNn5KGpD0viIKrQJOyLEEsxAc3u-FCMrV3VEQOTRP5o-m8NXHskiJnSQzOH38kiOh4_M7EBHGjFwmGAq6FKvcBkquu8iZfgGuacMDQR5tuw4oAnF9FiLJVsFOrINZ3A-gJnCReJhHELNER842v9L1vAbYohJGrmTdDC5GdBzb_wSd"
+              />
+            </div>
+            <div class="p-6 text-center">
+              <h3 class="font-headline-md text-primary mb-1">
+                Victor Abraham Abaidata
+              </h3>
+              <p class="font-body-md text-on-surface-variant">
+                Komisaris Independen
+              </p>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div
+            class="bg-surface rounded-xl overflow-hidden border border-outline-variant shadow-sm transition-transform hover:-translate-y-1"
+          >
+            <div class="aspect-[3/4] overflow-hidden">
+              <img
+                alt="Ali Baham Temongmere"
+                class="w-full h-full object-cover object-top"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOZYBwWqQEkXt7AIFW_nCmgZFOVokP2VuTMQCJrNEo84pa-6PLMrW6zIeEn1i24vZePioillA5VelnmyS69I4oB3VIP29bY5FbFslVs3PJron2XVbYPi9C1K5SvE58YQNiLf8UDOdGG03C83x0vZuFp4LgNXSFw1-9C0NplSMpGPvwXnci9tDCekWOntoQ-zOEU8kdEzGgDohXSt4ExhpTkReixIf0O_9C2rX782e-BRYYTTyRBuU4LPelURUycBHtus1cWpU9zf-U"
+              />
+            </div>
+            <div class="p-6 text-center">
+              <h3 class="font-headline-md text-primary mb-1">
+                Ali Baham Temongmere
+              </h3>
+              <p class="font-body-md text-on-surface-variant">
+                Komisaris Independen
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 1 -->
+          <div
+            class="bg-surface rounded-xl overflow-hidden border border-outline-variant shadow-sm transition-transform hover:-translate-y-1"
+          >
+            <div class="aspect-[3/4] overflow-hidden">
+              <img
+                alt="Yorgemes Derek Hegemur"
+                class="w-full h-full object-cover object-top"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQOFMXI79o8N9sqm116q4l3Ayul2XOq7Nlu70Lv3hfD_jXIpZaMl8GLoWtq_2hHIe5OBLua98FyJRk7EmJJ7x9l-Ly05tV2ISSCApUxJWR73HbfTq1WWbjkwj_5xwIK9ldFg9VtBBmbQwQ6RudOl7tKGyMKbyF_tOO39cUqIXKCFNpcSpJgmk8bHem99dMoUFZqxHpumcYEAXUGRL8noiBiisk4uNeKd9porZZLOw_NsBoxjL4bA76hEEleATwTW0MEX-FHdurNviV"
+              />
+            </div>
+            <div class="p-6 text-center">
+              <h3 class="font-headline-md text-primary mb-1">
+                Yorgemes Derek Hegemur
+              </h3>
+              <p class="font-body-md text-on-surface-variant"></p>
+              <div class="">Komisaris Non Independen</div>
+              <p class=""></p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="py-16 md:py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto content-layer"
+      >
+        <div class="text-center mb-16">
+          <h2
+            class="font-headline-lg text-headline-lg text-primary border-b-2 border-secondary pb-4 mb-4 inline-block"
+          >
+            Struktur Organisasi
+          </h2>
+        </div>
+        <div
+          class="bg-surface p-4 md:p-8 rounded-xl border border-outline-variant shadow-[0px_4px_20px_rgba(30,75,154,0.08)]"
+        >
+          <img
+            alt="Struktur Organisasi Bank Papua"
+            class="w-full h-auto rounded-lg"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLrN8ObfEx0aPUQjpK2jo32XjQFXqHK0C60UvYOixLrMJ-n3hAQKBUqKuEzemiRtG1pokCvQE6Rx73Edpbw8xJVJygoD-gADdhDPNhirSQ21FFAeJYlKQa7zhtL7aF5rx4FMwNvTtqiTxAqVgCfYqmSN7lczt203E6DfVtgKOoiNq2y33NY5QQpYzaybRVjkL9fkOu-VCZ4as5mHvJMZak0XWsK9uyiSkBInTAcJwJMASjCWHqE-5BJ2c5qTZ-XacfTr6zJ0T9wAXo"
+          />
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer
+      class="bg-primary dark:bg-on-background border-t-4 border-secondary full-width bottom-0"
+    >
+      <div
+        class="grid grid-cols-1 md:grid-cols-4 gap-gutter py-16 px-margin-desktop max-w-container-max mx-auto"
+      >
+        <div class="col-span-1 md:col-span-2">
+          <div class="flex items-center gap-4 mb-6">
+            <img
+              alt="FKDK BPDSI Logo"
+              class="h-14 w-auto brightness-0 invert opacity-90"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7NZc8Pm9gmTY1c-QIi_mSJYgDdKahl7c_D5iVRz_fxEWgqw6pkogejjuAgnPvg3TBGnYlG8j8ZBoJe-4rkbdE6r8KTXVsJMZv6QV66VbehWSezUQ7R6_8FP7n0yf2uga6DhO2Uozz_Bn8Bj0GJdwQPP31ybu8_k1nHzDL097fvYBm-_C-ZjcQOA_vLCwTCJLxgqis6cBa7fkmuenNqJS5GdTJtQv75Sjfux2sfqIuHFNQEM1xp7cbPkFpP0KND5EeYYVBA1V253A5"
+            />
+            <span class="font-display-lg text-headline-md text-on-primary block"
+              >FKDK BPDSI WilTim Squad</span
+            >
+          </div>
+          <p
+            class="font-body-md text-body-md text-on-primary/80 max-w-md leading-relaxed"
+          >
+            Forum Komunikasi Dewan Komisaris Bank Pembangunan Daerah Seluruh
+            Indonesia berkomitmen memperkuat tata kelola perbankan demi kemajuan
+            ekonomi daerah yang berkelanjutan.
+          </p>
+        </div>
+        <div>
+          <h4
+            class="text-secondary-fixed font-bold mb-6 uppercase tracking-wider text-sm"
+          >
+            Navigasi
+          </h4>
+          <ul class="space-y-4">
+            <li class="">
+              <a
+                class="text-on-primary/80 hover:text-secondary-fixed transition-colors"
+                href="tokoh.html"
+                >Profil Tokoh</a
+              >
+            </li>
+            <li class="">
+              <a
+                class="text-on-primary/80 hover:text-secondary-fixed transition-colors"
+                href="#"
+                >Berita Terkini</a
+              >
+            </li>
+            <li class="">
+              <a
+                class="text-on-primary/80 hover:text-secondary-fixed transition-colors"
+                href="#"
+                >Agenda Kegiatan</a
+              >
+            </li>
+            <li class="">
+              <a
+                class="text-on-primary/80 hover:text-secondary-fixed transition-colors"
+                href="#"
+                >Peta Situs</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4
+            class="text-secondary-fixed font-bold mb-6 uppercase tracking-wider text-sm"
+          >
+            Legalitas
+          </h4>
+          <ul class="space-y-4">
+            <li class="">
+              <a
+                class="text-on-primary/80 hover:text-secondary-fixed transition-colors"
+                href="#"
+                >Kebijakan Privasi</a
+              >
+            </li>
+            <li class="">
+              <a
+                class="text-on-primary/80 hover:text-secondary-fixed transition-colors"
+                href="#"
+                >Syarat &amp; Ketentuan</a
+              >
+            </li>
+            <li class="">
+              <a
+                class="text-on-primary/80 hover:text-secondary-fixed transition-colors"
+                href="#"
+                >Akses Anggota</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="border-t border-white/10 py-8 px-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4"
+      >
+        <p
+          class="font-body-md text-body-md text-on-primary/60 text-center md:text-left"
+        >
+          © 2024 Forum Komunikasi Dewan Komisaris Bank Pembangunan Daerah
+          Seluruh Indonesia (FKDK BPDSI). Hak Cipta Dilindungi Undang-Undang.
+        </p>
+        <div class="flex gap-4">
+          <a
+            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-on-primary hover:bg-secondary transition-colors"
+            href="#"
+          >
+            <span class="material-symbols-outlined text-xl">language</span>
+          </a>
+          <a
+            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-on-primary hover:bg-secondary transition-colors"
+            href="#"
+          >
+            <span class="material-symbols-outlined text-xl">mail</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
