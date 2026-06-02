@@ -163,54 +163,60 @@
   <body class="bg-background text-on-background font-body-md overflow-x-hidden">
     <!-- Top Navigation Bar -->
     <header
-      class="bg-surface border-b border-outline-variant w-full h-20 sticky top-0 z-50"
+      class="bg-surface-container-lowest dark:bg-inverse-surface border-b border-outline-variant dark:border-outline shadow-sm full-width top-0 z-50 sticky"
     >
-      <nav
-        class="flex justify-between items-center max-w-container-max mx-auto px-margin-desktop h-full"
+      <div
+        class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto"
       >
         <div class="flex items-center gap-4">
+          <img
+            alt="FKDK BPDSI Logo"
+            class="h-12 w-auto object-contain"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1PC0wAEUkj0BJtE6OwlxnZTIV3foLvwNybroeHGfLOMHCBWZZI3d_k75MQ0fU9FWsheRzRdrSzADsFKSTjITpw9Sl-hN5snzP1eA65Qa3KnkNyCW4CE1VFHUM2vFvfyl9xrSqQkPjtzi-ON2msw2srjQTzM100IE6f-jvYV8zDYvTBW4_FuNEubE4ChuslsobP1b1FIPYOvVMQ4oU8djktfHnPdoUDSWEIFFpbBWhJRs_4EQBMHkXi51xw6Go_nycZ0NyrClESfK2"
+          />
           <span
-            class="font-headline-md text-headline-md font-extrabold text-primary tracking-tight"
-            >FKDK BPDSI WILTIM SQUAD</span
+            class="font-display-lg text-headline-md font-bold text-primary dark:text-primary-fixed hidden sm:block"
+            >FKDK BPDSI WilTim Squad</span
           >
         </div>
-        <!-- Desktop Nav Links -->
-        <div class="hidden md:flex items-center gap-8">
+        <nav class="hidden lg:flex items-center gap-8 h-full">
           <a
-            class="text-on-surface-variant hover:text-primary transition-colors font-body-md"
-            href="#"
+            class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 scale-100 active:scale-95 transition-transform"
+            href="index.html"
             >Beranda</a
           >
           <a
-            class="text-primary font-bold border-b-2 border-secondary pb-1 font-body-md"
-            href="#"
+            class="font-body-md text-body-md text-primary dark:text-secondary-fixed-dim border-b-2 border-secondary font-semibold hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 scale-100 active:scale-95 transition-transform"
+            href="tokoh.html"
             >Profil Tokoh</a
           >
           <a
-            class="text-on-surface-variant hover:text-primary transition-colors font-body-md"
-            href="#"
+            class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 scale-100 active:scale-95 transition-transform"
+            href="berita.html"
             >Berita</a
           >
           <a
-            class="text-on-surface-variant hover:text-primary transition-colors font-body-md"
+            class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 scale-100 active:scale-95 transition-transform"
             href="video.html"
             >Video</a
           >
-
           <a
-            class="text-on-surface-variant hover:text-primary transition-colors font-body-md"
-            href="#"
-            >Tentang Kami</a
+            class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 scale-100 active:scale-95 transition-transform"
+            href="kegiatan.html"
+            >Galleri Kegiatan</a
           >
-        </div>
-        <div class="flex items-center gap-6">
+        </nav>
+        <div class="flex items-center gap-4">
           <button
-            class="bg-primary text-on-primary px-6 py-2 rounded-lg font-bold hover:opacity-90 transition-all"
+            class="bg-primary text-on-primary px-6 py-2 rounded-lg font-semibold hover:opacity-90 transition-opacity"
           >
             Hubungi Kami
           </button>
+          <button class="lg:hidden text-on-surface p-2">
+            <span class="material-symbols-outlined">menu</span>
+          </button>
         </div>
-      </nav>
+      </div>
     </header>
     <main class="relative">
       <!-- Hero Section: Profile Summary -->
