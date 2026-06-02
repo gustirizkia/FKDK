@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Detail Berita - FKDK BPDSI</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&amp;family=IBM+Plex+Sans:wght@400;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed": "#c3e8ff",
+              "tertiary-fixed-dim": "#95ceef",
+              "on-tertiary-container": "#8ec7e8",
+              "on-secondary": "#ffffff",
+              "on-surface": "#1a1c1e",
+              "on-primary-container": "#a5bfff",
+              "on-primary-fixed-variant": "#124392",
+              "secondary-fixed-dim": "#e9c17c",
+              "on-tertiary-fixed": "#001e2c",
+              "secondary-container": "#fdd48e",
+              "on-tertiary-fixed-variant": "#004c68",
+              primary: "#00347b",
+              "on-secondary-fixed": "#271900",
+              "inverse-on-surface": "#f0f0f3",
+              "surface-bright": "#f9f9fc",
+              "on-secondary-container": "#785a20",
+              "on-error": "#ffffff",
+              "on-primary-fixed": "#001944",
+              "primary-fixed": "#d9e2ff",
+              surface: "#f9f9fc",
+              "error-container": "#ffdad6",
+              "on-background": "#1a1c1e",
+              "surface-container-lowest": "#ffffff",
+              background: "#f9f9fc",
+              error: "#ba1a1a",
+              "surface-tint": "#335cab",
+              "surface-container-low": "#f3f3f6",
+              "surface-container-high": "#e8e8ea",
+              "tertiary-container": "#0d5471",
+              "on-secondary-fixed-variant": "#5d4208",
+              secondary: "#77591f",
+              tertiary: "#003c53",
+              "surface-container": "#eeeef0",
+              "inverse-surface": "#2f3133",
+              "surface-variant": "#e2e2e5",
+              "surface-dim": "#dadadc",
+              "surface-container-highest": "#e2e2e5",
+              "outline-variant": "#c3c6d3",
+              "on-tertiary": "#ffffff",
+              "on-surface-variant": "#434651",
+              "secondary-fixed": "#ffdea8",
+              "primary-fixed-dim": "#afc6ff",
+              "on-primary": "#ffffff",
+              "on-error-container": "#93000a",
+              "primary-container": "#1e4b9a",
+              outline: "#747782",
+              "inverse-primary": "#afc6ff",
+            },
+            borderRadius: {
+              DEFAULT: "0.125rem",
+              lg: "0.25rem",
+              xl: "0.5rem",
+              full: "0.75rem",
+            },
+            spacing: {
+              "margin-mobile": "20px",
+              unit: "8px",
+              "margin-desktop": "64px",
+              gutter: "24px",
+              "container-max": "1280px",
+            },
+            fontFamily: {
+              "headline-lg": ["Manrope"],
+              "label-sm": ["IBM Plex Sans"],
+              "body-lg": ["IBM Plex Sans"],
+              "headline-md": ["Manrope"],
+              "body-md": ["IBM Plex Sans"],
+              "headline-lg-mobile": ["Manrope"],
+              "display-lg": ["Manrope"],
+            },
+            fontSize: {
+              "headline-lg": [
+                "32px",
+                { lineHeight: "40px", fontWeight: "600" },
+              ],
+              "label-sm": [
+                "12px",
+                {
+                  lineHeight: "16px",
+                  letterSpacing: "0.05em",
+                  fontWeight: "600",
+                },
+              ],
+              "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+              "headline-md": [
+                "24px",
+                { lineHeight: "32px", fontWeight: "600" },
+              ],
+              "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+              "headline-lg-mobile": [
+                "24px",
+                { lineHeight: "32px", fontWeight: "600" },
+              ],
+              "display-lg": [
+                "48px",
+                {
+                  lineHeight: "56px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .watermark-bg {
+        position: relative;
+      }
+      .watermark-bg::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA1ehEZl3dH6Vcw7e4Emb07nR73uMloBBvPyhZNqXBWGjyVHdaSWfIIdEZKBvgGBoQH82y9umOxxeUO6CjVsTqwViqlydyyYrGbZ0uyAIVaXsDslhSZ3o9PWb7Zjr34v3w4KNu-GTjyGvdyYhKLKPCPLKyPjMv2uaf6AeGl6xj5f7LFiho9fNyUgGfZNdjL5tBakJQTSLFaHlMjVqEG44RpRwMjw1mKoH-uc0UShfaKJsQrMDsl7K9DZCXiNiYu4diWc-cr3pIIyaY1");
+        background-repeat: repeat-y;
+        background-position: center top;
+        background-size: 50% auto;
+        opacity: 0.05;
+        z-index: 0;
+        pointer-events: none;
+      }
+      .content-layer {
+        position: relative;
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background text-on-background font-body-md antialiased min-h-screen flex flex-col"
+  >
+    <!-- TopNavBar -->
+    <header
+      class="bg-surface border-b border-outline-variant shadow-sm sticky top-0 z-50"
+    >
+      <div
+        class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-20"
+      >
+        <div
+          class="font-headline-md text-headline-md font-bold text-primary flex items-center gap-2"
+        >
+          <img
+            alt="FKDK BPDSI Logo"
+            class="h-12 w-auto"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1ehEZl3dH6Vcw7e4Emb07nR73uMloBBvPyhZNqXBWGjyVHdaSWfIIdEZKBvgGBoQH82y9umOxxeUO6CjVsTqwViqlydyyYrGbZ0uyAIVaXsDslhSZ3o9PWb7Zjr34v3w4KNu-GTjyGvdyYhKLKPCPLKyPjMv2uaf6AeGl6xj5f7LFiho9fNyUgGfZNdjL5tBakJQTSLFaHlMjVqEG44RpRwMjw1mKoH-uc0UShfaKJsQrMDsl7K9DZCXiNiYu4diWc-cr3pIIyaY1"
+          />
+          <span class="hidden md:inline">FKDK BPDSI</span>
+        </div>
+        <nav class="hidden md:flex items-center gap-6">
+          <a
+            class="text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-container-low px-3 py-2 rounded-lg font-label-sm text-label-sm"
+            href="#"
+            >Beranda</a
+          >
+          <a
+            class="text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-container-low px-3 py-2 rounded-lg font-label-sm text-label-sm"
+            href="#"
+            >Profil Tokoh</a
+          >
+          <a
+            class="text-primary border-b-2 border-secondary font-bold pb-1 px-3 py-2 font-label-sm text-label-sm"
+            href="#"
+            >Berita</a
+          >
+          <a
+            class="text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-container-low px-3 py-2 rounded-lg font-label-sm text-label-sm"
+            href="video.html"
+            >Video</a
+          >
+          <a
+            class="text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-container-low px-3 py-2 rounded-lg font-label-sm text-label-sm"
+            href="#"
+            >Kegiatan</a
+          >
+          <a
+            class="text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-container-low px-3 py-2 rounded-lg font-label-sm text-label-sm"
+            href="#"
+            >Tentang Kami</a
+          >
+        </nav>
+        <div class="flex items-center gap-4">
+          <button
+            class="text-on-surface-variant hover:text-primary transition-colors"
+          >
+            <span class="material-symbols-outlined">search</span>
+          </button>
+          <a
+            class="hidden md:flex items-center justify-center bg-primary text-on-primary px-6 py-2 rounded-full font-label-sm text-label-sm hover:bg-primary-container transition-colors"
+            href="#"
+            >Login Anggota</a
+          >
+          <button class="md:hidden text-on-surface-variant">
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- Main Content -->
+    <main class="flex-grow pt-12 pb-24 watermark-bg">
+      <article
+        class="max-w-4xl mx-auto px-margin-mobile md:px-gutter content-layer"
+      >
+        <!-- Article Header -->
+        <header class="mb-10 text-center">
+          <span
+            class="inline-block bg-tertiary-fixed text-on-tertiary-fixed px-4 py-1 rounded-xl font-label-sm text-label-sm mb-6"
+            >Kegiatan Forum</span
+          >
+          <h1 class="font-display-lg text-display-lg text-primary mb-6">
+            Transformasi Bank Pembangunan Daerah Menuju BPD Regional Champion
+            2045
+          </h1>
+          <div
+            class="flex items-center justify-center gap-6 text-on-surface-variant font-label-sm text-label-sm"
+          >
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-[18px]"
+                >calendar_today</span
+              >
+              <span class="">12 Nov 2024</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-[18px]">person</span>
+              <span class="">Admin FKDK</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-[18px]"
+                >schedule</span
+              >
+              <span class="">5 menit baca</span>
+            </div>
+          </div>
+        </header>
+        <!-- Hero Image -->
+        <figure
+          class="mb-12 rounded-xl overflow-hidden shadow-sm border border-outline-variant"
+        >
+          <img
+            alt="Corporate conference setting"
+            class="w-full h-[500px] object-cover"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8YhQ94tYa5M7zcX-JsNOXByfP2PvBhNjuqX3ptTHWFa7PHduVBez8l1wZ3poNOo2fJ8m5-Kkl7laiLjsTQcUwnBA0j4v-cEg__jRoJWIecsxfUiTmffD-B7AsVEmbPs_TJdBiVXPxkyVappxZ73dfK3zCQ2LRSJQQoZtYf8eS0ZYoYOhvQrvUtcPViQbE_DG4HSNlQ8cl7Qc4XrzRKFlJYHOxjZMoz2NNpkhx-6q4GnjMLmLru3PU3tvpsxEx0J1lea8OdBYn-qG8"
+          />
+        </figure>
+        <!-- Layout Grid for Content and Share -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+          <!-- Share Sticky Column (Desktop) -->
+          <aside class="hidden md:block col-span-1">
+            <div class="sticky top-32 flex flex-col gap-4 items-center">
+              <span
+                class="font-label-sm text-label-sm text-on-surface-variant mb-2"
+                style="writing-mode: vertical-rl; transform: rotate(180deg)"
+                >Bagikan</span
+              >
+              <button
+                class="w-10 h-10 rounded-full bg-surface-container border border-outline-variant flex items-center justify-center text-primary hover:bg-tertiary-fixed transition-colors"
+              >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >share</span
+                >
+              </button>
+              <button
+                class="w-10 h-10 rounded-full bg-surface-container border border-outline-variant flex items-center justify-center text-primary hover:bg-tertiary-fixed transition-colors"
+              >
+                <span class="material-symbols-outlined">link</span>
+              </button>
+              <button
+                class="w-10 h-10 rounded-full bg-surface-container border border-outline-variant flex items-center justify-center text-primary hover:bg-tertiary-fixed transition-colors"
+              >
+                <span class="material-symbols-outlined">mail</span>
+              </button>
+            </div>
+          </aside>
+          <!-- Article Body -->
+          <div
+            class="col-span-1 md:col-span-10 font-body-lg text-body-lg text-on-surface space-y-6"
+          >
+            <p class="lead font-headline-md text-headline-md text-primary mb-8">
+              Dalam upaya menghadapi tantangan perbankan di era modern, Forum
+              Komunikasi Dewan Komisaris Bank Pembangunan Daerah Seluruh
+              Indonesia (FKDK BPDSI) menggelar pertemuan strategis yang fokus
+              pada peningkatan tata kelola dan digitalisasi.
+            </p>
+            <p class="">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <h2
+              class="font-headline-lg text-headline-lg text-primary mt-12 mb-4"
+            >
+              Transformasi Digital sebagai Keharusan
+            </h2>
+            <p class="">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+              aspernatur aut odit aut fugit.
+            </p>
+            <blockquote
+              class="my-10 pl-6 border-l-4 border-secondary bg-surface-container-low py-6 px-8 rounded-r-lg font-headline-md text-headline-md text-primary italic shadow-sm"
+            >
+              "Inovasi bukanlah sebuah pilihan, melainkan fondasi utama bagi
+              Bank Pembangunan Daerah untuk tetap relevan dan kompetitif di
+              ekosistem finansial global."
+            </blockquote>
+            <p class="">
+              Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+              consectetur, adipisci velit, sed quia non numquam eius modi
+              tempora incidunt ut labore et dolore magnam aliquam quaerat
+              voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem
+              ullam corporis suscipit laboriosam.
+            </p>
+            <h3
+              class="font-headline-md text-headline-md text-primary mt-10 mb-4"
+            >
+              Penguatan Sinergi Antar BPD
+            </h3>
+            <p class="">
+              At vero eos et accusamus et iusto odio dignissimos ducimus qui
+              blanditiis praesentium voluptatum deleniti atque corrupti quos
+              dolores et quas molestias excepturi sint occaecati cupiditate non
+              provident, similique sunt in culpa qui officia deserunt mollitia
+              animi, id est laborum et dolorum fuga.
+            </p>
+          </div>
+          <!-- Empty space for grid symmetry -->
+          <div class="hidden md:block col-span-1"></div>
+        </div>
+        <!-- Mobile Share (Horizontal) -->
+        <div
+          class="md:hidden flex justify-center gap-4 mt-12 pt-8 border-t border-outline-variant"
+        >
+          <button
+            class="flex items-center gap-2 px-4 py-2 rounded-full border border-outline-variant text-primary font-label-sm text-label-sm"
+          >
+            <span class="material-symbols-outlined text-[18px]">share</span>
+            Bagikan
+          </button>
+          <button
+            class="flex items-center gap-2 px-4 py-2 rounded-full border border-outline-variant text-primary font-label-sm text-label-sm"
+          >
+            <span class="material-symbols-outlined text-[18px]">link</span>
+            Salin Tautan
+          </button>
+        </div>
+      </article>
+      <!-- Related News Section -->
+      <section
+        class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mt-24"
+      >
+        <div
+          class="flex items-center justify-between mb-8 border-b border-outline-variant pb-4"
+        >
+          <h3 class="font-headline-lg text-headline-lg text-primary">
+            Berita Terkait
+          </h3>
+          <a
+            class="text-secondary font-label-sm text-label-sm hover:underline flex items-center"
+            href="#"
+            >Lihat Semua
+            <span class="material-symbols-outlined ml-1 text-[16px]"
+              >arrow_forward</span
+            ></a
+          >
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Card 1 -->
+          <div
+            class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300 group cursor-pointer flex flex-col"
+          >
+            <div
+              class="h-48 bg-surface-container-high relative overflow-hidden"
+            >
+              <div
+                class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors z-10"
+              ></div>
+              <img
+                alt="Related news thumbnail"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8YhQ94tYa5M7zcX-JsNOXByfP2PvBhNjuqX3ptTHWFa7PHduVBez8l1wZ3poNOo2fJ8m5-Kkl7laiLjsTQcUwnBA0j4v-cEg__jRoJWIecsxfUiTmffD-B7AsVEmbPs_TJdBiVXPxkyVappxZ73dfK3zCQ2LRSJQQoZtYf8eS0ZYoYOhvQrvUtcPViQbE_DG4HSNlQ8cl7Qc4XrzRKFlJYHOxjZMoz2NNpkhx-6q4GnjMLmLru3PU3tvpsxEx0J1lea8OdBYn-qG8"
+              />
+            </div>
+            <div class="p-6 flex-grow flex flex-col">
+              <span class="text-label-sm font-label-sm text-secondary mb-2"
+                >Regulasi</span
+              >
+              <h4
+                class="font-headline-md text-headline-md text-primary mb-3 group-hover:text-tertiary transition-colors line-clamp-2"
+              >
+                Penerapan Standar Baru GCG di Lingkungan Bank Daerah
+              </h4>
+              <div
+                class="mt-auto flex items-center text-outline font-label-sm text-label-sm pt-4"
+              >
+                <span class="material-symbols-outlined text-[16px] mr-1"
+                  >schedule</span
+                >
+                10 Nov 2024
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div
+            class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300 group cursor-pointer flex flex-col"
+          >
+            <div
+              class="h-48 bg-surface-container-high relative overflow-hidden"
+            >
+              <div
+                class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors z-10"
+              ></div>
+              <img
+                alt="Related news thumbnail"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8YhQ94tYa5M7zcX-JsNOXByfP2PvBhNjuqX3ptTHWFa7PHduVBez8l1wZ3poNOo2fJ8m5-Kkl7laiLjsTQcUwnBA0j4v-cEg__jRoJWIecsxfUiTmffD-B7AsVEmbPs_TJdBiVXPxkyVappxZ73dfK3zCQ2LRSJQQoZtYf8eS0ZYoYOhvQrvUtcPViQbE_DG4HSNlQ8cl7Qc4XrzRKFlJYHOxjZMoz2NNpkhx-6q4GnjMLmLru3PU3tvpsxEx0J1lea8OdBYn-qG8"
+              />
+            </div>
+            <div class="p-6 flex-grow flex flex-col">
+              <span class="text-label-sm font-label-sm text-secondary mb-2"
+                >Penghargaan</span
+              >
+              <h4
+                class="font-headline-md text-headline-md text-primary mb-3 group-hover:text-tertiary transition-colors line-clamp-2"
+              >
+                BPD Bali Raih Penghargaan Bank Terbaik 2024
+              </h4>
+              <div
+                class="mt-auto flex items-center text-outline font-label-sm text-label-sm pt-4"
+              >
+                <span class="material-symbols-outlined text-[16px] mr-1"
+                  >schedule</span
+                >
+                08 Nov 2024
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div
+            class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300 group cursor-pointer flex flex-col border-t-4 border-t-secondary"
+          >
+            <div
+              class="h-48 bg-surface-container-high relative overflow-hidden"
+            >
+              <div
+                class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors z-10"
+              ></div>
+              <img
+                alt="Related news thumbnail"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8YhQ94tYa5M7zcX-JsNOXByfP2PvBhNjuqX3ptTHWFa7PHduVBez8l1wZ3poNOo2fJ8m5-Kkl7laiLjsTQcUwnBA0j4v-cEg__jRoJWIecsxfUiTmffD-B7AsVEmbPs_TJdBiVXPxkyVappxZ73dfK3zCQ2LRSJQQoZtYf8eS0ZYoYOhvQrvUtcPViQbE_DG4HSNlQ8cl7Qc4XrzRKFlJYHOxjZMoz2NNpkhx-6q4GnjMLmLru3PU3tvpsxEx0J1lea8OdBYn-qG8"
+              />
+            </div>
+            <div class="p-6 flex-grow flex flex-col">
+              <span class="text-label-sm font-label-sm text-secondary mb-2"
+                >Ekonomi Regional</span
+              >
+              <h4
+                class="font-headline-md text-headline-md text-primary mb-3 group-hover:text-tertiary transition-colors line-clamp-2"
+              >
+                Analisis Potensi Pembiayaan Sektor Infrastruktur Lokal
+              </h4>
+              <div
+                class="mt-auto flex items-center text-outline font-label-sm text-label-sm pt-4"
+              >
+                <span class="material-symbols-outlined text-[16px] mr-1"
+                  >schedule</span
+                >
+                05 Nov 2024
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer
+      class="bg-primary border-t border-primary-container full-width bottom-0"
+    >
+      <div
+        class="w-full py-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col gap-8"
+      >
+        <div
+          class="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-on-primary/20 pb-8 gap-6"
+        >
+          <div
+            class="font-headline-md text-headline-md font-bold text-on-primary"
+          >
+            FKDK BPDSI
+          </div>
+          <div class="flex flex-wrap gap-6">
+            <a
+              class="font-body-md text-body-md text-on-primary-container hover:text-secondary-fixed transition-colors"
+              href="#"
+              >Kebijakan Privasi</a
+            >
+            <a
+              class="font-body-md text-body-md text-on-primary-container hover:text-secondary-fixed transition-colors"
+              href="#"
+              >Syarat &amp; Ketentuan</a
+            >
+            <a
+              class="font-body-md text-body-md text-on-primary-container hover:text-secondary-fixed transition-colors"
+              href="#"
+              >Peta Situs</a
+            >
+            <a
+              class="font-body-md text-body-md text-on-primary-container hover:text-secondary-fixed transition-colors"
+              href="#"
+              >Hubungi Kami</a
+            >
+          </div>
+        </div>
+        <div class="font-label-sm text-label-sm text-on-primary-container">
+          © 2024 Forum Komunikasi Dewan Komisaris Bank Pembangunan Daerah
+          Seluruh Indonesia (FKDK BPDSI). Seluruh Hak Cipta Dilindungi.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

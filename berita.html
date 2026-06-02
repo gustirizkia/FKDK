@@ -1,0 +1,749 @@
+<!doctype html>
+<html class="light" lang="id" style="">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Berita Terkini - FKDK BPDSI</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-on-surface": "#f0f0f3",
+              "on-primary-fixed": "#001944",
+              "secondary-fixed-dim": "#e9c17c",
+              secondary: "#77591f",
+              "tertiary-fixed": "#c3e8ff",
+              "primary-fixed-dim": "#afc6ff",
+              "outline-variant": "#c3c6d3",
+              "surface-variant": "#e2e2e5",
+              "on-primary-fixed-variant": "#124392",
+              tertiary: "#003c53",
+              "on-tertiary-container": "#8ec7e8",
+              "on-secondary-fixed": "#271900",
+              "on-secondary": "#ffffff",
+              surface: "#f9f9fc",
+              "inverse-surface": "#2f3133",
+              "secondary-fixed": "#ffdea8",
+              "on-tertiary": "#ffffff",
+              "on-primary": "#ffffff",
+              "on-tertiary-fixed-variant": "#004c68",
+              "tertiary-container": "#0d5471",
+              "surface-dim": "#dadadc",
+              "on-error": "#ffffff",
+              "surface-container-high": "#e8e8ea",
+              background: "#f9f9fc",
+              error: "#ba1a1a",
+              outline: "#747782",
+              "surface-container": "#eeeef0",
+              "on-primary-container": "#a5bfff",
+              "surface-container-low": "#f3f3f6",
+              "surface-bright": "#f9f9fc",
+              "inverse-primary": "#afc6ff",
+              "tertiary-fixed-dim": "#95ceef",
+              "on-surface-variant": "#434651",
+              "primary-container": "#1e4b9a",
+              "error-container": "#ffdad6",
+              "surface-container-lowest": "#ffffff",
+              "on-error-container": "#93000a",
+              "primary-fixed": "#d9e2ff",
+              "secondary-container": "#fdd48e",
+              "on-background": "#1a1c1e",
+              "surface-tint": "#335cab",
+              primary: "#00347b",
+              "on-secondary-container": "#785a20",
+              "surface-container-highest": "#e2e2e5",
+              "on-tertiary-fixed": "#001e2c",
+              "on-surface": "#1a1c1e",
+              "on-secondary-fixed-variant": "#5d4208",
+            },
+            borderRadius: {
+              DEFAULT: "0.125rem",
+              lg: "0.25rem",
+              xl: "0.5rem",
+              full: "0.75rem",
+            },
+            spacing: {
+              "container-max": "1280px",
+              unit: "8px",
+              "margin-desktop": "64px",
+              gutter: "24px",
+              "margin-mobile": "20px",
+            },
+            fontFamily: {
+              "display-lg": ["Manrope"],
+              "body-lg": ["IBM Plex Sans"],
+              "label-sm": ["IBM Plex Sans"],
+              "headline-md": ["Manrope"],
+              "headline-lg": ["Manrope"],
+              "headline-lg-mobile": ["Manrope"],
+              "body-md": ["IBM Plex Sans"],
+            },
+            fontSize: {
+              "display-lg": [
+                "48px",
+                {
+                  lineHeight: "56px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+              "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+              "label-sm": [
+                "12px",
+                {
+                  lineHeight: "16px",
+                  letterSpacing: "0.05em",
+                  fontWeight: "600",
+                },
+              ],
+              "headline-md": [
+                "24px",
+                { lineHeight: "32px", fontWeight: "600" },
+              ],
+              "headline-lg": [
+                "32px",
+                { lineHeight: "40px", fontWeight: "600" },
+              ],
+              "headline-lg-mobile": [
+                "24px",
+                { lineHeight: "32px", fontWeight: "600" },
+              ],
+              "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+        vertical-align: middle;
+      }
+      .watermark-bg {
+        background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDyQPgNQVbXrK-VWYKRrNEyDRDX1CxC9v1vYsyq-k5zFSlPIPHw9SQYtS8iIw5q60wpBlOrs_GcvdHXfHZ1gq301ju65_4hgUMrKR1stDsfcBBeEOL34qHAaGDOGwULzIQ18QZvTJyfPveyae-OF2DeB8N58k6JRJ-8o0ZFsYCUSqeCgKSQbztmVVAkvFxkE5S-yW256Y3_ORqTfILIQIRxZL30Tl8P-A9ct08dVmkTbylWVjOW1oAX1Gok3shpVJVN4UkhGkiTJXHd");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 40%;
+        opacity: 0.03;
+        pointer-events: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(233, 236, 239, 0.5);
+      }
+    </style>
+  </head>
+  <body class="bg-surface font-body-md text-on-surface">
+    <!-- Watermark Background -->
+    <div class="watermark-bg"></div>
+    <!-- Top Navigation Bar (Shared Component) -->
+    <header
+      class="bg-surface-container-lowest dark:bg-inverse-surface border-b border-outline-variant dark:border-outline shadow-sm full-width top-0 z-50 sticky"
+    >
+      <div
+        class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto"
+      >
+        <div class="flex items-center gap-4">
+          <img
+            alt="FKDK BPDSI Logo"
+            class="h-12 w-auto object-contain"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1PC0wAEUkj0BJtE6OwlxnZTIV3foLvwNybroeHGfLOMHCBWZZI3d_k75MQ0fU9FWsheRzRdrSzADsFKSTjITpw9Sl-hN5snzP1eA65Qa3KnkNyCW4CE1VFHUM2vFvfyl9xrSqQkPjtzi-ON2msw2srjQTzM100IE6f-jvYV8zDYvTBW4_FuNEubE4ChuslsobP1b1FIPYOvVMQ4oU8djktfHnPdoUDSWEIFFpbBWhJRs_4EQBMHkXi51xw6Go_nycZ0NyrClESfK2"
+          />
+          <span
+            class="font-display-lg text-headline-md font-bold text-primary dark:text-primary-fixed hidden sm:block"
+            >FKDK BPDSI WilTim Squad</span
+          >
+        </div>
+        <nav class="hidden lg:flex items-center gap-8 h-full">
+          <a
+            class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 scale-100 active:scale-95 transition-transform"
+            href="index.html"
+            >Beranda</a
+          >
+          <a
+            class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 scale-100 active:scale-95 transition-transform"
+            href="tokoh.html"
+            >Profil Tokoh</a
+          >
+          <a
+            class="font-body-md text-body-md text-primary dark:text-secondary-fixed-dim border-b-2 border-secondary font-semibold hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 scale-100 active:scale-95 transition-transform"
+            href="berita.html"
+            >Berita</a
+          >
+          <a
+            class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 scale-100 active:scale-95 transition-transform"
+            href="video.html"
+            >Video</a
+          >
+          <a
+            class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 scale-100 active:scale-95 transition-transform"
+            href="kegiatan.html"
+            >Galleri Kegiatan</a
+          >
+        </nav>
+        <div class="flex items-center gap-4">
+          <button
+            class="bg-primary text-on-primary px-6 py-2 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+          >
+            Hubungi Kami
+          </button>
+          <button class="lg:hidden text-on-surface p-2">
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="max-w-container-max mx-auto px-margin-desktop py-12">
+      <!-- Hero Section: Featured News -->
+      <section class="mb-16">
+        <div
+          class="relative w-full aspect-[21/9] rounded-xl overflow-hidden shadow-lg group"
+        >
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent z-10"
+          ></div>
+          <a href="detail-berita.html">
+            <img
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              data-alt="A professional wide-angle shot of a high-level banking summit meeting with delegates seated at a large mahogany table in a modern executive boardroom. The lighting is sophisticated, corporate cool-toned with highlights on the national emblem. The environment exudes institutional authority and stable professional excellence, using the brand's navy blue and gold accents throughout the interior design."
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEb6Bhfivm3icp-k8hPdsambyfhlC0sn-pxu713PR0Hd_mX4ttnBxR5G6o8lzT9282hUmYfKhxAmz3QldUlZ-O5ZiZWvtXWrQiFo7YoxHJ3pGxy4wrHY4bJ_Yb_js406DKJkQjiuCGfLG1iIy7n92Gcz7Hmwjl68SR0vR-P6ee7TzfED1qJumXUq5MCmh7MpYci6gxTFycY4b4zupchT0XO4ENGBaQqKhCn1VHW99qY5tSoDED8xV7p3kHyq-4PTUI9C8ECC08addC"
+            />
+          </a>
+          <a
+            href="detail-berita.html"
+            class="absolute bottom-0 left-0 p-12 z-20 max-w-3xl"
+          >
+            <span
+              class="inline-block bg-secondary text-on-secondary px-4 py-1 rounded-full text-label-sm font-label-sm mb-4"
+              >REGULASI</span
+            >
+            <h1
+              class="font-display-lg text-display-lg text-on-primary mb-4 leading-tight"
+            >
+              Implementasi Tata Kelola Perbankan Daerah dalam Menghadapi
+              Digitalisasi Global
+            </h1>
+            <div
+              class="flex items-center gap-4 text-on-primary/80 font-body-md text-body-md"
+            >
+              <span class="flex items-center gap-1"
+                ><span class="material-symbols-outlined text-[18px]"
+                  >calendar_today</span
+                >
+                15 Mei 2024</span
+              >
+              <span class="flex items-center gap-1"
+                ><span class="material-symbols-outlined text-[18px]"
+                  >person</span
+                >
+                Oleh Humas FKDK</span
+              >
+            </div>
+          </a>
+        </div>
+      </section>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+        <!-- Left Content: News Grid -->
+        <div class="lg:col-span-8">
+          <div
+            class="flex justify-between items-end mb-8 border-b border-outline-variant pb-4"
+          >
+            <h2
+              class="font-headline-lg text-headline-lg text-primary border-l-4 border-secondary pl-4"
+            >
+              Berita Terbaru
+            </h2>
+            <div class="flex gap-4">
+              <button
+                class="text-primary font-semibold flex items-center gap-1 hover:gap-2 transition-all"
+              >
+                Filter
+                <span class="material-symbols-outlined">filter_list</span>
+              </button>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+            <!-- News Card 1 -->
+            <article
+              class="glass-card rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 group"
+              style="transform: translateY(0px)"
+            >
+              <a href="detail-berita.html">
+                <div class="h-48 overflow-hidden relative">
+                  <img
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    data-alt="A close-up shot of a modern banking terminal with a gold-embossed credit card and a digital interface showing secure financial transactions. The lighting is soft and refined, focusing on textures of brushed metal and glass. The scene projects trust and advanced technology, reflecting the institutional authority of the banking forum with a clean corporate aesthetic."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_XzeRNrf1njZ4lti2hBpFpUevy91fP3H-9TfqubCw2e6z8RhcIlukJX0efAJfUM-UZ6dFFaObDtvuHcI7jvVL2ogl5dd-Uv1ODLm2XBTa5trOor5JaDOs119H9Z1fwsd3u_Ki3W8Oe2wDEl3uDwU5CTrwXT0khAFRB__hN8YOWnzyQXLOUTW8hmGI17ipf-uT6Os-zeHogKW3Bne4ZsjapQ1gSzxH9iEw3uATZKXM9YSroznradt9t_CfwQDRhwf48P9un36gJYn4"
+                  />
+                  <span
+                    class="absolute top-4 left-4 bg-primary/90 text-on-primary px-3 py-1 rounded-lg text-label-sm"
+                    >Kegiatan</span
+                  >
+                </div>
+                <div class="p-6">
+                  <p class="text-secondary font-semibold text-label-sm mb-2">
+                    14 MEI 2024
+                  </p>
+                  <h3
+                    class="font-headline-md text-headline-md text-on-background mb-3 group-hover:text-primary transition-colors"
+                  >
+                    Rapat Koordinasi Wilayah Timur FKDK BPDSI di Makassar
+                  </h3>
+                  <p
+                    class="text-on-surface-variant text-body-md line-clamp-3 mb-4"
+                  >
+                    Forum ini membahas sinergi antar BPD di wilayah timur untuk
+                    memperkuat penetrasi kredit UMKM di daerah pelosok.
+                  </p>
+                  <a
+                    class="text-primary font-bold flex items-center gap-1 group/link"
+                    href="#"
+                  >
+                    Baca Selengkapnya
+                    <span
+                      class="material-symbols-outlined transition-transform group-hover/link:translate-x-1"
+                      >chevron_right</span
+                    >
+                  </a>
+                </div>
+              </a>
+            </article>
+            <!-- News Card 2 -->
+            <article
+              class="glass-card rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 group"
+              style="transform: translateY(0px)"
+            >
+              <a href="detail-berita.html">
+                <div class="h-48 overflow-hidden relative">
+                  <img
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    data-alt="A professional portrait of a high-level bank executive speaking at a podium during a formal conference. The background is a blurred corporate step-and-repeat banner with institutional logos. The lighting is bright and clear, highlighting a professional and leadership-focused atmosphere. The overall mood is one of excellence and formal communication."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAksGqM-RII4L8YM_IIkLM_PhRzXCMVWsA36WWwDBm2aLG9HxUbpAzkpi5hW-AEbzF8ZsiynWsOVIQOwfypnpNpCa9Vl18NETkZfxMbDTabJU7TQsJuHPKzk2uQUBhyePnKgOo8Gjux3imzFnutBvKXrYApfr-IHBphjRI1B935T9gnT99-xQwzAfoFzoFqxsawh1N_IaBLr_by4OzdG7MjLUE6jxsGhW6kueQNJ7tx7MJ8UOGh7t5nF_DiIryiEArwXSBB94oHUdy_"
+                  />
+                  <span
+                    class="absolute top-4 left-4 bg-primary/90 text-on-primary px-3 py-1 rounded-lg text-label-sm"
+                    >Opini</span
+                  >
+                </div>
+                <div class="p-6">
+                  <p class="text-secondary font-semibold text-label-sm mb-2">
+                    12 MEI 2024
+                  </p>
+                  <h3
+                    class="font-headline-md text-headline-md text-on-background mb-3 group-hover:text-primary transition-colors"
+                  >
+                    Tantangan Keamanan Siber bagi Perbankan Daerah
+                  </h3>
+                  <p
+                    class="text-on-surface-variant text-body-md line-clamp-3 mb-4"
+                  >
+                    Ketua FKDK BPDSI memberikan pandangannya mengenai urgensi
+                    penguatan infrastruktur TI di tingkat Bank Pembangunan
+                    Daerah.
+                  </p>
+                  <a
+                    class="text-primary font-bold flex items-center gap-1 group/link"
+                    href="#"
+                  >
+                    Baca Selengkapnya
+                    <span
+                      class="material-symbols-outlined transition-transform group-hover/link:translate-x-1"
+                      >chevron_right</span
+                    >
+                  </a>
+                </div>
+              </a>
+            </article>
+            <!-- News Card 3 -->
+            <article
+              class="glass-card rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 group"
+              style="transform: translateY(0px)"
+            >
+              <a href="detail-berita.html">
+                <div class="h-48 overflow-hidden relative">
+                  <img
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    data-alt="A macro shot of architectural details of a modern bank building, featuring strong vertical lines of marble and glass under a clear blue sky. The composition is balanced and powerful, symbolizing stability and national pride. The lighting is golden-hour sunlight that creates a warm, premium glow on the structure's surfaces."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7oCI3G9z01irZNVUvk2a1sSSs3OP3cVtc-Y09l_m-XVVpjVIcW6c44Xve3lOrI-r1UNxvvdt1xFcNN4Q4-GySVUZpuxSUTZB9Dnsq8u-Fr-9OquIh_MovjbHPTMpJ7Ci9fubSKIjKxNrOv1nXRewzmFruI5pDPHxk72b-VFbs6oT9i6Z1KF2aM6S6NPp4YUcxwN6CR2FXMQkFbkQobzRs4zMb_EMa3wz6JFgXq3UGJmwRZ4FrArIAvAMNmbn3tmxhmU-xhNQm12Fu"
+                  />
+                  <span
+                    class="absolute top-4 left-4 bg-primary/90 text-on-primary px-3 py-1 rounded-lg text-label-sm"
+                    >Regulasi</span
+                  >
+                </div>
+                <div class="p-6">
+                  <p class="text-secondary font-semibold text-label-sm mb-2">
+                    10 MEI 2024
+                  </p>
+                  <h3
+                    class="font-headline-md text-headline-md text-on-background mb-3 group-hover:text-primary transition-colors"
+                  >
+                    Pedoman Baru OJK Mengenai Transparansi Dewan Komisaris
+                  </h3>
+                  <p
+                    class="text-on-surface-variant text-body-md line-clamp-3 mb-4"
+                  >
+                    Ringkasan aturan terbaru yang mewajibkan pelaporan rutin
+                    fungsi pengawasan secara digital kepada regulator pusat.
+                  </p>
+                  <a
+                    class="text-primary font-bold flex items-center gap-1 group/link"
+                    href="#"
+                  >
+                    Baca Selengkapnya
+                    <span
+                      class="material-symbols-outlined transition-transform group-hover/link:translate-x-1"
+                      >chevron_right</span
+                    >
+                  </a>
+                </div>
+              </a>
+            </article>
+            <!-- News Card 4 -->
+            <article
+              class="glass-card rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 group"
+              style="transform: translateY(0px)"
+            >
+              <a href="detail-berita.html">
+                <div class="h-48 overflow-hidden relative">
+                  <img
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    data-alt="A group of diverse professionals in formal business attire shaking hands in a bright, modern atrium with lush indoor greenery. The scene represents successful collaboration and institutional partnership. The lighting is airy and high-key, creating an atmosphere of transparency, growth, and professional success within the banking sector."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIvEqS97Uj09J64G9eTk-hePqS9yACzPC_nocVmbq-QfoQLtKQBtOVqQdkQxIql6KOvc1dR4xo0WmqVoub0fje_mVBhNcAM6RpCfSv3VH0mz19FLKPdJV55GydUNXmswsaIXUt4VPd36p0tcqM6CgLOvt-uEUIGZJW_QkCs9ErS7GMol2b9qqqK0JSSFvhmuaRSok0ngsVIZWpwgQhOS96XWQrwNqGa-pPkDEA0zLmOOMUVGAKLoL3iMMmACJmisUTjlyOMbtm-0iH"
+                  />
+                  <span
+                    class="absolute top-4 left-4 bg-primary/90 text-on-primary px-3 py-1 rounded-lg text-label-sm"
+                    >Kegiatan</span
+                  >
+                </div>
+                <div class="p-6">
+                  <p class="text-secondary font-semibold text-label-sm mb-2">
+                    08 MEI 2024
+                  </p>
+                  <h3
+                    class="font-headline-md text-headline-md text-on-background mb-3 group-hover:text-primary transition-colors"
+                  >
+                    Kerja Sama Strategis FKDK BPDSI dengan Bank Indonesia
+                  </h3>
+                  <p
+                    class="text-on-surface-variant text-body-md line-clamp-3 mb-4"
+                  >
+                    Nota kesepahaman baru untuk meningkatkan literasi keuangan
+                    digital bagi masyarakat di pelosok Indonesia melalui
+                    jaringan BPD.
+                  </p>
+                  <a
+                    class="text-primary font-bold flex items-center gap-1 group/link"
+                    href="#"
+                  >
+                    Baca Selengkapnya
+                    <span
+                      class="material-symbols-outlined transition-transform group-hover/link:translate-x-1"
+                      >chevron_right</span
+                    >
+                  </a>
+                </div>
+              </a>
+            </article>
+          </div>
+          <!-- Pagination -->
+          <div class="mt-12 flex justify-center items-center gap-2">
+            <button
+              class="w-10 h-10 flex items-center justify-center rounded border border-outline hover:bg-surface-container transition-colors"
+            >
+              <span class="material-symbols-outlined">chevron_left</span>
+            </button>
+            <button
+              class="w-10 h-10 flex items-center justify-center rounded bg-primary text-on-primary font-bold"
+            >
+              1
+            </button>
+            <button
+              class="w-10 h-10 flex items-center justify-center rounded border border-outline hover:bg-surface-container transition-colors"
+            >
+              2
+            </button>
+            <button
+              class="w-10 h-10 flex items-center justify-center rounded border border-outline hover:bg-surface-container transition-colors"
+            >
+              3
+            </button>
+            <span class="mx-2">...</span>
+            <button
+              class="w-10 h-10 flex items-center justify-center rounded border border-outline hover:bg-surface-container transition-colors"
+            >
+              <span class="material-symbols-outlined">chevron_right</span>
+            </button>
+          </div>
+        </div>
+        <!-- Right Content: Sidebar -->
+        <aside class="lg:col-span-4 space-y-gutter">
+          <!-- Popular This Week -->
+          <div
+            class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant shadow-sm"
+          >
+            <h3
+              class="font-headline-md text-headline-md text-primary mb-6 flex items-center gap-2"
+            >
+              <span
+                class="material-symbols-outlined text-secondary"
+                style="font-variation-settings: &quot;FILL&quot; 1"
+                >trending_up</span
+              >
+              REKOMENDASI
+            </h3>
+            <div class="space-y-6">
+              <div class="flex gap-4 group cursor-pointer">
+                <span
+                  class="text-display-lg text-primary/10 font-bold leading-none"
+                  >01</span
+                >
+                <div>
+                  <h4
+                    class="font-body-md text-body-md font-semibold text-on-surface group-hover:text-primary transition-colors line-clamp-2"
+                  >
+                    Kebijakan Baru Suku Bunga Pinjaman Daerah
+                  </h4>
+                  <p class="text-label-sm text-on-surface-variant mt-1">
+                    2.4k Pembaca
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-4 group cursor-pointer">
+                <span
+                  class="text-display-lg text-primary/10 font-bold leading-none"
+                  >02</span
+                >
+                <div>
+                  <h4
+                    class="font-body-md text-body-md font-semibold text-on-surface group-hover:text-primary transition-colors line-clamp-2"
+                  >
+                    Transformasi Budaya Kerja di Era Digital BPD
+                  </h4>
+                  <p class="text-label-sm text-on-surface-variant mt-1">
+                    1.8k Pembaca
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-4 group cursor-pointer">
+                <span
+                  class="text-display-lg text-primary/10 font-bold leading-none"
+                  >03</span
+                >
+                <div>
+                  <h4
+                    class="font-body-md text-body-md font-semibold text-on-surface group-hover:text-primary transition-colors line-clamp-2"
+                  >
+                    Profil: Visi Ketua Baru BPD Wilayah Barat
+                  </h4>
+                  <p class="text-label-sm text-on-surface-variant mt-1">
+                    1.2k Pembaca
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Newsletter / Call to Action -->
+          <div
+            class="bg-primary p-8 rounded-xl text-on-primary relative overflow-hidden"
+          >
+            <div class="absolute -right-10 -bottom-10 opacity-10">
+              <img
+                class="w-48 h-48 rotate-12"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyQPgNQVbXrK-VWYKRrNEyDRDX1CxC9v1vYsyq-k5zFSlPIPHw9SQYtS8iIw5q60wpBlOrs_GcvdHXfHZ1gq301ju65_4hgUMrKR1stDsfcBBeEOL34qHAaGDOGwULzIQ18QZvTJyfPveyae-OF2DeB8N58k6JRJ-8o0ZFsYCUSqeCgKSQbztmVVAkvFxkE5S-yW256Y3_ORqTfILIQIRxZL30Tl8P-A9ct08dVmkTbylWVjOW1oAX1Gok3shpVJVN4UkhGkiTJXHd"
+              />
+            </div>
+            <h3 class="font-headline-md text-headline-md mb-4 relative z-10">
+              Dapatkan Berita Eksklusif
+            </h3>
+            <p class="text-on-primary/80 mb-6 relative z-10">
+              Berlangganan newsletter kami untuk update regulasi dan kegiatan
+              forum langsung di email Anda.
+            </p>
+            <div class="space-y-3 relative z-10">
+              <input
+                class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-secondary"
+                placeholder="Alamat Email Anda"
+                type="email"
+              />
+              <button
+                class="w-full bg-secondary text-on-secondary py-3 rounded-lg font-bold hover:bg-secondary/90 transition-colors"
+              >
+                Berlangganan
+              </button>
+            </div>
+          </div>
+          <!-- Important Links -->
+          <div
+            class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant shadow-sm"
+          >
+            <h3 class="font-headline-md text-headline-md text-primary mb-6">
+              Tautan Penting
+            </h3>
+            <ul class="space-y-4">
+              <li class="">
+                <a
+                  class="flex items-center justify-between p-3 rounded-lg border border-outline-variant hover:border-secondary hover:bg-secondary-container/10 transition-all group"
+                  href="#"
+                >
+                  <span class="font-body-md font-semibold"
+                    >Laporan Tahunan 2023</span
+                  >
+                  <span
+                    class="material-symbols-outlined text-secondary group-hover:translate-x-1 transition-transform"
+                    >download</span
+                  >
+                </a>
+              </li>
+              <li class="">
+                <a
+                  class="flex items-center justify-between p-3 rounded-lg border border-outline-variant hover:border-secondary hover:bg-secondary-container/10 transition-all group"
+                  href="#"
+                >
+                  <span class="font-body-md font-semibold">AD/ART Forum</span>
+                  <span
+                    class="material-symbols-outlined text-secondary group-hover:translate-x-1 transition-transform"
+                    >description</span
+                  >
+                </a>
+              </li>
+              <li class="">
+                <a
+                  class="flex items-center justify-between p-3 rounded-lg border border-outline-variant hover:border-secondary hover:bg-secondary-container/10 transition-all group"
+                  href="#"
+                >
+                  <span class="font-body-md font-semibold"
+                    >Portal Anggota FKDK</span
+                  >
+                  <span
+                    class="material-symbols-outlined text-secondary group-hover:translate-x-1 transition-transform"
+                    >login</span
+                  >
+                </a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </main>
+    <!-- Footer (Shared Component) -->
+    <footer
+      class="bg-primary dark:bg-on-background full-width bottom-0 border-t-4 border-secondary"
+    >
+      <div
+        class="grid grid-cols-1 md:grid-cols-4 gap-gutter py-16 px-margin-desktop max-w-container-max mx-auto"
+      >
+        <div class="col-span-1 md:col-span-2">
+          <div class="flex items-center gap-4 mb-6">
+            <img
+              alt="FKDK BPDSI Logo"
+              class="h-16 w-auto brightness-0 invert"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyQPgNQVbXrK-VWYKRrNEyDRDX1CxC9v1vYsyq-k5zFSlPIPHw9SQYtS8iIw5q60wpBlOrs_GcvdHXfHZ1gq301ju65_4hgUMrKR1stDsfcBBeEOL34qHAaGDOGwULzIQ18QZvTJyfPveyae-OF2DeB8N58k6JRJ-8o0ZFsYCUSqeCgKSQbztmVVAkvFxkE5S-yW256Y3_ORqTfILIQIRxZL30Tl8P-A9ct08dVmkTbylWVjOW1oAX1Gok3shpVJVN4UkhGkiTJXHd"
+            />
+            <span class="font-display-lg text-headline-md text-on-primary"
+              >FKDK BPDSI</span
+            >
+          </div>
+          <p class="text-on-primary/80 font-body-md max-w-md">
+            Wadah komunikasi dan sinergi bagi Dewan Komisaris Bank Pembangunan
+            Daerah di seluruh Indonesia untuk mewujudkan perbankan daerah yang
+            tangguh dan terpercaya.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-on-primary font-bold mb-6">Navigasi Cepat</h4>
+          <ul class="space-y-4 font-body-md text-on-primary/80">
+            <li class="">
+              <a class="hover:text-secondary-fixed transition-colors" href="#"
+                >Kebijakan Privasi</a
+              >
+            </li>
+            <li class="">
+              <a class="hover:text-secondary-fixed transition-colors" href="#"
+                >Syarat &amp; Ketentuan</a
+              >
+            </li>
+            <li class="">
+              <a class="hover:text-secondary-fixed transition-colors" href="#"
+                >Peta Situs</a
+              >
+            </li>
+            <li class="">
+              <a class="hover:text-secondary-fixed transition-colors" href="#"
+                >Akses Anggota</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-on-primary font-bold mb-6">Hubungi Kami</h4>
+          <div class="space-y-4 font-body-md text-on-primary/80">
+            <p class="flex items-start gap-2">
+              <span class="material-symbols-outlined text-secondary-fixed"
+                >location_on</span
+              >
+              Gedung Perbankan Lt. 5, Jl. Sudirman No. 1, Jakarta Pusat
+            </p>
+            <p class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-secondary-fixed"
+                >phone</span
+              >
+              (021) 555-0123
+            </p>
+            <p class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-secondary-fixed"
+                >mail</span
+              >
+              sekretariat@fkdkbpdsi.id
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="border-t border-white/10 py-8 px-margin-desktop max-w-container-max mx-auto text-center"
+      >
+        <p class="text-on-primary/60 text-body-md">
+          © 2024 Forum Komunikasi Dewan Komisaris Bank Pembangunan Daerah
+          Seluruh Indonesia (FKDK BPDSI). Hak Cipta Dilindungi Undang-Undang.
+        </p>
+      </div>
+    </footer>
+    <script>
+      // Micro-interaction for news cards
+      document.querySelectorAll("article").forEach((card) => {
+        card.addEventListener("mouseenter", () => {
+          card.style.transform = "translateY(-4px)";
+        });
+        card.addEventListener("mouseleave", () => {
+          card.style.transform = "translateY(0)";
+        });
+      });
+    </script>
+  </body>
+</html>

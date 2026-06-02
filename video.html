@@ -1,0 +1,942 @@
+<!doctype html>
+<html class="light" lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Galeri Video | FKDK BPDSI</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-highest": "#e2e2e5",
+              "on-tertiary-fixed": "#001e2c",
+              "on-surface": "#1a1c1e",
+              "on-secondary-fixed-variant": "#5d4208",
+              "surface-container-lowest": "#ffffff",
+              "primary-fixed": "#d9e2ff",
+              "on-error-container": "#93000a",
+              "secondary-container": "#fdd48e",
+              "on-background": "#1a1c1e",
+              primary: "#00347b",
+              "on-secondary-container": "#785a20",
+              "surface-tint": "#335cab",
+              "primary-container": "#1e4b9a",
+              "error-container": "#ffdad6",
+              outline: "#747782",
+              "surface-container": "#eeeef0",
+              "on-primary-container": "#a5bfff",
+              "surface-dim": "#dadadc",
+              "on-error": "#ffffff",
+              "tertiary-container": "#0d5471",
+              "surface-container-high": "#e8e8ea",
+              background: "#f9f9fc",
+              error: "#ba1a1a",
+              "secondary-fixed": "#ffdea8",
+              "on-tertiary": "#ffffff",
+              surface: "#f9f9fc",
+              "inverse-surface": "#2f3133",
+              "on-primary": "#ffffff",
+              "on-tertiary-fixed-variant": "#004c68",
+              "on-primary-fixed-variant": "#124392",
+              "surface-variant": "#e2e2e5",
+              tertiary: "#003c53",
+              "on-tertiary-container": "#8ec7e8",
+              "on-secondary-fixed": "#271900",
+              "on-secondary": "#ffffff",
+              "on-primary-fixed": "#001944",
+              "inverse-on-surface": "#f0f0f3",
+              "secondary-fixed-dim": "#e9c17c",
+              secondary: "#77591f",
+              "primary-fixed-dim": "#afc6ff",
+              "outline-variant": "#c3c6d3",
+              "tertiary-fixed": "#c3e8ff",
+            },
+            borderRadius: {
+              DEFAULT: "0.125rem",
+              lg: "0.25rem",
+              xl: "0.5rem",
+              full: "0.75rem",
+            },
+            spacing: {
+              "margin-mobile": "20px",
+              "container-max": "1280px",
+              unit: "8px",
+              "margin-desktop": "64px",
+              gutter: "24px",
+            },
+            fontFamily: {
+              "display-lg": ["Manrope"],
+              "body-lg": ["IBM Plex Sans"],
+              "label-sm": ["IBM Plex Sans"],
+              "headline-md": ["Manrope"],
+              "headline-lg": ["Manrope"],
+              "headline-lg-mobile": ["Manrope"],
+              "body-md": ["IBM Plex Sans"],
+            },
+            fontSize: {
+              "display-lg": [
+                "48px",
+                {
+                  lineHeight: "56px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+              "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+              "label-sm": [
+                "12px",
+                {
+                  lineHeight: "16px",
+                  letterSpacing: "0.05em",
+                  fontWeight: "600",
+                },
+              ],
+              "headline-md": [
+                "24px",
+                { lineHeight: "32px", fontWeight: "600" },
+              ],
+              "headline-lg": [
+                "32px",
+                { lineHeight: "40px", fontWeight: "600" },
+              ],
+              "headline-lg-mobile": [
+                "24px",
+                { lineHeight: "32px", fontWeight: "600" },
+              ],
+              "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      .watermark-bg {
+        position: relative;
+        overflow: hidden;
+      }
+      .watermark-bg::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 800px;
+        height: 800px;
+        background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDDZSkbkbibR5xaD9oD71eOBoMpsO8w-rq0ZSa7C0VQPoIUK3CiSzFI2G75qQwY7U-naB5Ml3FVXCXgOziMn3m5WcwqDOgzFmleQoFfujKAMY_nD2Fe5uGBbvjFmhnubBWi8pLqB98k5pgJoJlD2MQ00dT8qfRd7NpBqfFUmDnRCLIYBs0jFrKbwY8Y_uExR2bv9-oV8Lo62JGy_cQpufI69dAwUd0v7IqQgQv6CEmS5gvoPNAFzUvVsPI8MgTS1wn_ynXDWX_Y4JjA");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0.04;
+        transform: translate(-50%, -50%) rotate(-15deg);
+        pointer-events: none;
+        z-index: 0;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+      .video-aspect {
+        aspect-ratio: 16 / 9;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed"
+  >
+    <!-- TopNavBar -->
+    <header
+      class="bg-surface-container-lowest dark:bg-inverse-surface border-b border-outline-variant dark:border-outline shadow-sm full-width top-0 z-50 sticky"
+    >
+      <div
+        class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto"
+      >
+        <div class="flex items-center gap-4">
+          <img
+            alt="FKDK BPDSI Logo"
+            class="h-12 w-auto object-contain"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1PC0wAEUkj0BJtE6OwlxnZTIV3foLvwNybroeHGfLOMHCBWZZI3d_k75MQ0fU9FWsheRzRdrSzADsFKSTjITpw9Sl-hN5snzP1eA65Qa3KnkNyCW4CE1VFHUM2vFvfyl9xrSqQkPjtzi-ON2msw2srjQTzM100IE6f-jvYV8zDYvTBW4_FuNEubE4ChuslsobP1b1FIPYOvVMQ4oU8djktfHnPdoUDSWEIFFpbBWhJRs_4EQBMHkXi51xw6Go_nycZ0NyrClESfK2"
+          />
+          <span
+            class="font-display-lg text-headline-md font-bold text-primary dark:text-primary-fixed hidden sm:block"
+            >FKDK BPDSI WilTim Squad</span
+          >
+        </div>
+        <nav class="hidden lg:flex items-center gap-8 h-full">
+          <a
+            class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 scale-100 active:scale-95 transition-transform"
+            href="index.html"
+            >Beranda</a
+          >
+          <a
+            class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 scale-100 active:scale-95 transition-transform"
+            href="tokoh.html"
+            >Profil Tokoh</a
+          >
+          <a
+            class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 scale-100 active:scale-95 transition-transform"
+            href="berita.html"
+            >Berita</a
+          >
+          <a
+            class="font-body-md text-body-md text-primary dark:text-secondary-fixed-dim border-b-2 border-secondary font-semibold hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 scale-100 active:scale-95 transition-transform"
+            href="video.html"
+            >Video</a
+          >
+          <a
+            class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 scale-100 active:scale-95 transition-transform"
+            href="kegiatan.html"
+            >Galleri Kegiatan</a
+          >
+        </nav>
+        <div class="flex items-center gap-4">
+          <button
+            class="bg-primary text-on-primary px-6 py-2 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+          >
+            Hubungi Kami
+          </button>
+          <button class="lg:hidden text-on-surface p-2">
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="min-h-screen">
+      <!-- Cinematic Hero / Featured Video -->
+      <section
+        class="relative h-[80vh] min-h-[600px] flex items-center overflow-hidden bg-primary"
+      >
+        <div class="absolute inset-0 z-0">
+          <img
+            alt="Featured Background"
+            class="w-full h-full object-cover opacity-40 blur-[2px] scale-105"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0Z-IhD70X-c291c2-po_mXQlS8Ua4hCDupasOd_fP8TXC0lmLeHNKNRRXMWbg62nbvjOjGtRr4Lm3rJsqoSwWeakphiSWCsG5MkqXgJKsxt6G4JSI9hHEOOJ7b97sLMZrzOVRFalWBAxYnrYDggCupUYKMJKB5F1kIWNLehPKfNXZ1Dzrdkcd8mKsfv-kLCpjetK9Uo7MRBRft5dt0JCmNaNyf7bg25_U8LWUvAIGVUT1O_CNxhPxA0myHaF_ONBxGDDrq7ThNCQv"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-transparent"
+          ></div>
+        </div>
+        <div
+          class="max-w-container-max mx-auto px-margin-desktop relative z-10 w-full"
+        >
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+              <div
+                class="inline-flex items-center gap-2 bg-secondary/20 backdrop-blur-sm border border-secondary/30 text-secondary-fixed px-4 py-1.5 rounded-full font-label-sm uppercase tracking-widest"
+              >
+                <span
+                  class="w-2 h-2 rounded-full bg-secondary animate-pulse"
+                ></span>
+                Video Pilihan Utama
+              </div>
+              <h1
+                class="font-display-lg text-display-lg text-white leading-tight"
+              >
+                Strategi Penguatan Tata Kelola BPD Menuju Indonesia Emas 2045
+              </h1>
+              <p class="text-on-primary-container text-body-lg max-w-xl">
+                Analisis mendalam mengenai peran strategis Bank Pembangunan
+                Daerah dalam mendukung visi nasional, menampilkan panel ahli dan
+                regulator keuangan.
+              </p>
+              <div class="flex flex-wrap gap-4 pt-4">
+                <button
+                  class="bg-secondary text-on-secondary px-8 py-4 rounded-xl font-bold flex items-center gap-3 hover:shadow-lg hover:shadow-secondary/20 transition-all group"
+                >
+                  <span
+                    class="material-symbols-outlined fill-current"
+                    data-icon="play_circle"
+                    >play_circle</span
+                  >
+                  Tonton Sekarang
+                </button>
+                <button
+                  class="border border-white/30 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-bold flex items-center gap-3 transition-all"
+                >
+                  <span class="material-symbols-outlined" data-icon="info"
+                    >info</span
+                  >
+                  Detail Video
+                </button>
+              </div>
+              <div
+                class="flex items-center gap-8 text-white/70 font-label-sm pt-6 border-t border-white/10"
+              >
+                <span class="flex items-center gap-2"
+                  ><span
+                    class="material-symbols-outlined text-sm"
+                    data-icon="calendar_today"
+                    >calendar_today</span
+                  >
+                  12 Nov 2024</span
+                >
+                <span class="flex items-center gap-2"
+                  ><span
+                    class="material-symbols-outlined text-sm"
+                    data-icon="schedule"
+                    >schedule</span
+                  >
+                  45:20 Menit</span
+                >
+                <span class="flex items-center gap-2"
+                  ><span
+                    class="material-symbols-outlined text-sm"
+                    data-icon="visibility"
+                    >visibility</span
+                  >
+                  4.5k Tayangan</span
+                >
+              </div>
+            </div>
+            <div class="hidden lg:block">
+              <div
+                class="relative group cursor-pointer overflow-hidden rounded-2xl shadow-2xl border-4 border-white/10"
+              >
+                <img
+                  alt="Thumbnail"
+                  class="w-full aspect-video object-cover transition-transform duration-700 group-hover:scale-105"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHm2Uk28Mav_7G5ZvseubO4wp3W2RUGhqJzd6XEFtxaKNNuNsQJxQY0MOVvvsSBwbpLvNkNUGEYA91fGLcbQzMsmgZNUIuduwEiE-SOW5ju0Tz0cd3wLC1UybrBxkJEg-SGKWgRC4AEl7J562KlrM-T-xnpIQaSKfIk6uLhLlRR0ogsfj4l8oJxMhNuRRMk2a23ih-9x__lBvcj9wjfKXXIogsBkr-iRE4z6RMM_yFWO0RYTnEWLyESb7qSOE4aXwoMe0cS2IVE_Rg"
+                />
+                <div
+                  class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all flex items-center justify-center"
+                >
+                  <div
+                    class="w-20 h-20 bg-white/20 backdrop-blur-md border border-white/40 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform"
+                  >
+                    <span
+                      class="material-symbols-outlined text-white text-4xl fill-current"
+                      data-icon="play_arrow"
+                      >play_arrow</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Video Gallery Grid -->
+      <section class="py-24 watermark-bg bg-surface">
+        <div
+          class="max-w-container-max mx-auto px-margin-desktop relative z-10"
+        >
+          <!-- Section Header & Filter -->
+          <div class="mb-16">
+            <div
+              class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-10"
+            >
+              <div class="space-y-4">
+                <h2 class="font-headline-lg text-headline-lg text-primary">
+                  Jelajahi Perpustakaan Video
+                </h2>
+                <p class="text-on-surface-variant max-w-xl font-body-md">
+                  Saring konten berdasarkan kategori untuk menemukan webinar,
+                  dokumentasi kegiatan, atau pesan kepemimpinan yang Anda cari.
+                </p>
+              </div>
+              <div class="relative w-full md:w-96">
+                <input
+                  class="w-full pl-12 pr-4 py-4 bg-white border border-outline-variant rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all"
+                  placeholder="Cari topik, pembicara, atau kegiatan..."
+                  type="text"
+                />
+                <span
+                  class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline"
+                  data-icon="search"
+                  >search</span
+                >
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-3">
+              <button
+                class="px-6 py-2.5 rounded-full font-semibold bg-primary text-on-primary shadow-lg shadow-primary/20 transition-all"
+              >
+                Semua Video
+              </button>
+              <button
+                class="px-6 py-2.5 rounded-full font-semibold bg-white border border-outline-variant text-on-surface-variant hover:border-primary hover:text-primary transition-all"
+              >
+                Webinar Eksklusif
+              </button>
+              <button
+                class="px-6 py-2.5 rounded-full font-semibold bg-white border border-outline-variant text-on-surface-variant hover:border-primary hover:text-primary transition-all"
+              >
+                Kegiatan Forum
+              </button>
+              <button
+                class="px-6 py-2.5 rounded-full font-semibold bg-white border border-outline-variant text-on-surface-variant hover:border-primary hover:text-primary transition-all"
+              >
+                Wawancara Tokoh
+              </button>
+              <button
+                class="px-6 py-2.5 rounded-full font-semibold bg-white border border-outline-variant text-on-surface-variant hover:border-primary hover:text-primary transition-all"
+              >
+                Pesan Ketua
+              </button>
+            </div>
+          </div>
+          <!-- Masonry/Asymmetrical Grid Layout -->
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter"
+          >
+            <!-- Featured Small Card 1 -->
+            <div class="lg:col-span-4 group">
+              <div
+                class="bg-white rounded-2xl overflow-hidden border border-outline-variant hover:shadow-xl hover:-translate-y-2 transition-all duration-500"
+              >
+                <div class="relative video-aspect overflow-hidden">
+                  <img
+                    alt="Video Thumbnail"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCj-_24Jy8FyM3dtL-U12BRJr6hDLXKuFERU8SfdN1KURQHb61Bl17yUjxshhHvzPtcuceCxFvBc19qAxcXBHl6C24f5UROq7Wjlt7jZXT0UgBysSnKSPsLTLNfGDr7WUBEJaIUtr016hJQsyQAcFkdUI2P8htiT1y1aedRHZZ-thL1uF_hf93H6-S-mhozoOoYh_8Cqmh-bgJ_uMZ_rT08zhDOJKD0T8XjRecjRfIYzE1MeaFLZPhWtW7ViBVyW84cQPVduyGLqb_E"
+                  />
+                  <div
+                    class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-all"
+                  ></div>
+                  <div
+                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                  >
+                    <div
+                      class="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center text-primary shadow-xl"
+                    >
+                      <span
+                        class="material-symbols-outlined text-3xl fill-current"
+                        data-icon="play_arrow"
+                        >play_arrow</span
+                      >
+                    </div>
+                  </div>
+                  <span
+                    class="absolute bottom-4 right-4 bg-black/70 text-white px-2 py-1 rounded-lg text-xs font-bold backdrop-blur-sm"
+                    >12:30</span
+                  >
+                </div>
+                <div class="p-6">
+                  <div
+                    class="flex items-center gap-2 text-primary font-label-sm uppercase mb-3"
+                  >
+                    <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                    Kegiatan Forum
+                  </div>
+                  <h3
+                    class="font-headline-md text-headline-md text-on-surface line-clamp-2 mb-4 group-hover:text-primary transition-colors"
+                  >
+                    Dokumentasi Rapat Koordinasi Nasional 2024
+                  </h3>
+                  <div
+                    class="flex items-center justify-between text-outline font-label-sm pt-4 border-t border-outline-variant"
+                  >
+                    <span class="flex items-center gap-1.5"
+                      ><span
+                        class="material-symbols-outlined text-sm"
+                        data-icon="visibility"
+                        >visibility</span
+                      >
+                      1.2k Views</span
+                    >
+                    <span class="flex items-center gap-1.5"
+                      ><span
+                        class="material-symbols-outlined text-sm"
+                        data-icon="calendar_today"
+                        >calendar_today</span
+                      >
+                      5 hari lalu</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Featured Small Card 2 -->
+            <div class="lg:col-span-4 group">
+              <div
+                class="bg-white rounded-2xl overflow-hidden border border-outline-variant hover:shadow-xl hover:-translate-y-2 transition-all duration-500"
+              >
+                <div class="relative video-aspect overflow-hidden">
+                  <img
+                    alt="Video Thumbnail"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnO8Euite3X1AaC2WC1CV5mp9uphB_K7lGBB-L_BHnW1PmEXNaeLY9RPDFe-cCrB0Qf4n9dO8uqzrD69qUqNC8VddcKTHl3maRzX0lpZxIM7suCry-dfwZ-AUthYWGAXL4fX9AwMleiR3Gc13Rf9qHG8OzHDXUl-vyTdgCqKYGh6H-_Q8Yz-nT7BvOUeaVZUMUBoxJTUQzEAL1KmNKbSyYSjEy_L1RJSZ4VkVtG45T-FZHEBAgTi_ykbs-BbGaEfd2X-sX2j2PoXNT"
+                  />
+                  <div
+                    class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-all"
+                  ></div>
+                  <div
+                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                  >
+                    <div
+                      class="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center text-primary shadow-xl"
+                    >
+                      <span
+                        class="material-symbols-outlined text-3xl fill-current"
+                        data-icon="play_arrow"
+                        >play_arrow</span
+                      >
+                    </div>
+                  </div>
+                  <span
+                    class="absolute bottom-4 right-4 bg-black/70 text-white px-2 py-1 rounded-lg text-xs font-bold backdrop-blur-sm"
+                    >08:45</span
+                  >
+                </div>
+                <div class="p-6">
+                  <div
+                    class="flex items-center gap-2 text-primary font-label-sm uppercase mb-3"
+                  >
+                    <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                    Inovasi Digital
+                  </div>
+                  <h3
+                    class="font-headline-md text-headline-md text-on-surface line-clamp-2 mb-4 group-hover:text-primary transition-colors"
+                  >
+                    Transformasi Digital Banking BPD Regional
+                  </h3>
+                  <div
+                    class="flex items-center justify-between text-outline font-label-sm pt-4 border-t border-outline-variant"
+                  >
+                    <span class="flex items-center gap-1.5"
+                      ><span
+                        class="material-symbols-outlined text-sm"
+                        data-icon="visibility"
+                        >visibility</span
+                      >
+                      890 Views</span
+                    >
+                    <span class="flex items-center gap-1.5"
+                      ><span
+                        class="material-symbols-outlined text-sm"
+                        data-icon="calendar_today"
+                        >calendar_today</span
+                      >
+                      1 minggu lalu</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Featured Small Card 3 -->
+            <div class="lg:col-span-4 group">
+              <div
+                class="bg-white rounded-2xl overflow-hidden border border-outline-variant hover:shadow-xl hover:-translate-y-2 transition-all duration-500"
+              >
+                <div class="relative video-aspect overflow-hidden">
+                  <img
+                    alt="Video Thumbnail"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIn2AtwZ9Dk0RBWzHkqAGmE9WgSeddXFmhloNmWODOqJYY5Xo1780BtXhHF88LUH7YPiQaghQ0uPg9q3Ny2AoxMZCxbJ_GK_g5eeJjNpRHwKX6QDFbg6-0L3HkTZufmv6os7DWi98YtCzKMu2oU2eHx-53Arm0tYTovwjgf-AdPU1DYu2rA8vnBKUsYFK34I3ql6OSPunzs5PYRoulVo_5_qVkrvatmvOaX-W2uRC_wS1TSq2tZr4DgGuO6buP1VWJuJFRS19zoudU"
+                  />
+                  <div
+                    class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-all"
+                  ></div>
+                  <div
+                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                  >
+                    <div
+                      class="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center text-primary shadow-xl"
+                    >
+                      <span
+                        class="material-symbols-outlined text-3xl fill-current"
+                        data-icon="play_arrow"
+                        >play_arrow</span
+                      >
+                    </div>
+                  </div>
+                  <span
+                    class="absolute bottom-4 right-4 bg-black/70 text-white px-2 py-1 rounded-lg text-xs font-bold backdrop-blur-sm"
+                    >15:10</span
+                  >
+                </div>
+                <div class="p-6">
+                  <div
+                    class="flex items-center gap-2 text-primary font-label-sm uppercase mb-3"
+                  >
+                    <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                    Workshop
+                  </div>
+                  <h3
+                    class="font-headline-md text-headline-md text-on-surface line-clamp-2 mb-4 group-hover:text-primary transition-colors"
+                  >
+                    Workshop Implementasi GCG pada Perbankan Daerah
+                  </h3>
+                  <div
+                    class="flex items-center justify-between text-outline font-label-sm pt-4 border-t border-outline-variant"
+                  >
+                    <span class="flex items-center gap-1.5"
+                      ><span
+                        class="material-symbols-outlined text-sm"
+                        data-icon="visibility"
+                        >visibility</span
+                      >
+                      2.1k Views</span
+                    >
+                    <span class="flex items-center gap-1.5"
+                      ><span
+                        class="material-symbols-outlined text-sm"
+                        data-icon="calendar_today"
+                        >calendar_today</span
+                      >
+                      2 minggu lalu</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Large Card spanning columns -->
+            <div class="lg:col-span-8 group">
+              <div
+                class="bg-white rounded-2xl overflow-hidden border border-outline-variant hover:shadow-xl hover:-translate-y-2 transition-all duration-500 flex flex-col md:flex-row h-full"
+              >
+                <div class="md:w-1/2 relative overflow-hidden h-full">
+                  <img
+                    alt="Video Thumbnail"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmF-elCy3Hy0LtVQgRPjMAbW9pWGTryAiGdgqRZFOMb0vu6leMksVcv1ti-PEj8RJw_WBuUyWl1_7HI7fuOsk1--8kbX89mba3JQuJqmMHN2XHhs1lrxmbuqvVwqpJYb__mE_5TRMjTuoY56xDRU0AjWmXwMeGTOe0rNrwLKHGG_m6TgSk97QNWUZL4cg0NG7u59ZEFHsDqsGVONOCy1tsxbTUPnHxA4iQ5e24Bz9BLI-UjaEA-FNqxoJL-flws2RPcMihpTJU_yV1"
+                  />
+                  <div
+                    class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                  >
+                    <div
+                      class="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center text-primary shadow-xl"
+                    >
+                      <span
+                        class="material-symbols-outlined text-3xl fill-current"
+                        data-icon="play_arrow"
+                        >play_arrow</span
+                      >
+                    </div>
+                  </div>
+                  <span
+                    class="absolute bottom-4 right-4 bg-black/70 text-white px-2 py-1 rounded-lg text-xs font-bold backdrop-blur-sm"
+                    >22:05</span
+                  >
+                </div>
+                <div class="md:w-1/2 p-8 flex flex-col justify-center">
+                  <div
+                    class="flex items-center gap-2 text-primary font-label-sm uppercase mb-4"
+                  >
+                    <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                    Webinar Utama
+                  </div>
+                  <h3
+                    class="font-headline-lg text-headline-lg text-on-surface mb-4 group-hover:text-primary transition-colors leading-tight"
+                  >
+                    Manajemen Risiko Siber dalam Transformasi Digital
+                  </h3>
+                  <p
+                    class="text-on-surface-variant font-body-md line-clamp-3 mb-6"
+                  >
+                    Diskusi panel mendalam bersama para pakar keamanan siber dan
+                    regulator mengenai tantangan perlindungan data nasabah di
+                    ekosistem perbankan daerah yang semakin terdigitalisasi.
+                  </p>
+                  <div
+                    class="flex items-center justify-between text-outline font-label-sm pt-6 border-t border-outline-variant mt-auto"
+                  >
+                    <span class="flex items-center gap-1.5"
+                      ><span
+                        class="material-symbols-outlined text-sm"
+                        data-icon="visibility"
+                        >visibility</span
+                      >
+                      3.4k Views</span
+                    >
+                    <span class="flex items-center gap-1.5"
+                      ><span
+                        class="material-symbols-outlined text-sm"
+                        data-icon="calendar_today"
+                        >calendar_today</span
+                      >
+                      1 bulan lalu</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Vertical Card -->
+            <div class="lg:col-span-4 group">
+              <div
+                class="bg-primary rounded-2xl overflow-hidden shadow-xl hover:-translate-y-2 transition-all duration-500 h-full flex flex-col relative"
+              >
+                <div
+                  class="absolute top-0 right-0 p-6 text-white/10 select-none pointer-events-none"
+                >
+                  <span
+                    class="material-symbols-outlined text-9xl"
+                    data-icon="format_quote"
+                    >format_quote</span
+                  >
+                </div>
+                <div class="relative video-aspect overflow-hidden">
+                  <img
+                    alt="Video Thumbnail"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPYZcGZ5GVlrDkHTInvzL9dAONb0jMvMtkya5qt3iB-LyttHIHrsfH__KAI6m14NH2i_1N8DVpzdY4W5uRF6y2d22QgOlRYOv4qzwgkgR43FnD12w_6vPZfe67PHbch-TxocM-x1V09OnZ4QPR59ZTvFC8rv7hpPHVbmJQdUPtIxe3RLpbvxrAT-KEKuiqNpDhHcK_WjkelYZ1xqwylDI9bc52mS9DXf3J3Bem03YTDturM2aC0n6k-c8_aMTevwSvzNHNMlkIy_s9"
+                  />
+                  <div
+                    class="absolute inset-0 flex items-center justify-center"
+                  >
+                    <div
+                      class="w-14 h-14 bg-secondary text-on-secondary rounded-full flex items-center justify-center shadow-2xl"
+                    >
+                      <span
+                        class="material-symbols-outlined text-2xl fill-current"
+                        data-icon="play_arrow"
+                        >play_arrow</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="p-8 flex flex-col flex-grow">
+                  <div
+                    class="text-secondary-fixed font-label-sm uppercase mb-4 tracking-widest"
+                  >
+                    Pesan Ketua
+                  </div>
+                  <h3
+                    class="font-headline-md text-headline-md text-white mb-4 group-hover:text-secondary-fixed transition-colors"
+                  >
+                    Refleksi Akhir Tahun: Sinergi BPD Menuju Kemandirian Ekonomi
+                  </h3>
+                  <p
+                    class="text-on-primary-container font-body-md line-clamp-4 mb-8"
+                  >
+                    Pesan penutup tahun dari Ketua FKDK BPDSI mengenai capaian
+                    yang telah diraih dan tantangan strategis tahun mendatang.
+                  </p>
+                  <div
+                    class="mt-auto flex items-center justify-between text-white/50 font-label-sm"
+                  >
+                    <span class="">8:12 Menit</span>
+                    <span class="">Desember 2023</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Load More -->
+          <div class="mt-20 flex flex-col items-center gap-6">
+            <p class="text-on-surface-variant font-body-md">
+              Menampilkan 5 dari 48 Video
+            </p>
+            <button
+              class="px-10 py-4 bg-white border-2 border-primary text-primary rounded-xl font-bold hover:bg-primary hover:text-on-primary transition-all flex items-center gap-2 group shadow-sm"
+            >
+              Muat Video Lainnya
+              <span
+                class="material-symbols-outlined group-hover:translate-y-1 transition-transform"
+                data-icon="keyboard_arrow_down"
+                >keyboard_arrow_down</span
+              >
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- Institutional Newsletter -->
+      <section class="py-24 bg-primary-container text-on-primary-container">
+        <div class="max-w-container-max mx-auto px-margin-desktop">
+          <div
+            class="glass-card rounded-3xl p-12 md:p-16 flex flex-col lg:flex-row items-center gap-12 border-none"
+          >
+            <div class="lg:w-1/2 space-y-6 text-center lg:text-left">
+              <h2
+                class="font-display-lg text-headline-lg md:text-display-lg text-primary leading-tight"
+              >
+                Dapatkan Update Multimedia Terkini
+              </h2>
+              <p class="text-on-surface-variant text-body-lg">
+                Berlangganan untuk menerima notifikasi langsung di email Anda
+                setiap kali kami merilis video webinar atau dokumentasi kegiatan
+                strategis terbaru.
+              </p>
+            </div>
+            <div class="lg:w-1/2 w-full">
+              <form
+                class="flex flex-col sm:flex-row gap-4 p-2 bg-white rounded-2xl shadow-xl border border-outline-variant"
+              >
+                <input
+                  class="flex-1 px-6 py-4 bg-transparent outline-none text-on-surface font-body-md"
+                  placeholder="Alamat Email Profesional"
+                  required=""
+                  type="email"
+                />
+                <button
+                  class="bg-primary text-on-primary px-8 py-4 rounded-xl font-bold whitespace-nowrap hover:shadow-lg hover:shadow-primary/30 transition-all active:scale-95"
+                  type="submit"
+                >
+                  Berlangganan Gratis
+                </button>
+              </form>
+              <p
+                class="mt-4 text-xs text-on-surface-variant text-center lg:text-left px-4"
+              >
+                Kami menghargai privasi Anda. Berhenti berlangganan kapan saja.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer
+      class="bg-primary dark:bg-on-background border-t-4 border-secondary full-width bottom-0"
+    >
+      <div
+        class="grid grid-cols-1 md:grid-cols-4 gap-gutter py-16 px-margin-desktop max-w-container-max mx-auto"
+      >
+        <div class="md:col-span-1">
+          <div class="flex items-center gap-3 mb-6">
+            <img
+              alt="FKDK BPDSI Logo"
+              class="h-10 w-auto object-contain brightness-0 invert"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDZSkbkbibR5xaD9oD71eOBoMpsO8w-rq0ZSa7C0VQPoIUK3CiSzFI2G75qQwY7U-naB5Ml3FVXCXgOziMn3m5WcwqDOgzFmleQoFfujKAMY_nD2Fe5uGBbvjFmhnubBWi8pLqB98k5pgJoJlD2MQ00dT8qfRd7NpBqfFUmDnRCLIYBs0jFrKbwY8Y_uExR2bv9-oV8Lo62JGy_cQpufI69dAwUd0v7IqQgQv6CEmS5gvoPNAFzUvVsPI8MgTS1wn_ynXDWX_Y4JjA"
+            />
+            <span class="font-display-lg text-headline-md text-on-primary block"
+              >FKDK BPDSI</span
+            >
+          </div>
+          <p class="text-on-primary/80 font-body-md mb-8 leading-relaxed">
+            Wadah komunikasi dewan komisaris Bank Pembangunan Daerah
+            se-Indonesia untuk penguatan perbankan nasional.
+          </p>
+          <div class="flex gap-4">
+            <a
+              class="w-10 h-10 rounded-full border border-on-primary/30 flex items-center justify-center text-on-primary hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-colors"
+              href="#"
+            >
+              <span class="material-symbols-outlined" data-icon="language"
+                >language</span
+              >
+            </a>
+            <a
+              class="w-10 h-10 rounded-full border border-on-primary/30 flex items-center justify-center text-on-primary hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-colors"
+              href="#"
+            >
+              <span class="material-symbols-outlined" data-icon="mail"
+                >mail</span
+              >
+            </a>
+          </div>
+        </div>
+        <div>
+          <h5
+            class="text-secondary-fixed font-bold mb-6 uppercase tracking-widest text-sm"
+          >
+            Navigasi
+          </h5>
+          <ul class="space-y-4">
+            <li class="">
+              <a
+                class="text-on-primary/80 hover:text-secondary-fixed transition-colors"
+                href="#"
+                >Beranda</a
+              >
+            </li>
+            <li class="">
+              <a
+                class="text-on-primary/80 hover:text-secondary-fixed transition-colors"
+                href="#"
+                >Berita Terkini</a
+              >
+            </li>
+            <li class="">
+              <a
+                class="text-on-primary/80 hover:text-secondary-fixed transition-colors"
+                href="#"
+                >Kegiatan Forum</a
+              >
+            </li>
+            <li class="">
+              <a class="text-secondary-fixed" href="#">Galeri Video</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h5
+            class="text-secondary-fixed font-bold mb-6 uppercase tracking-widest text-sm"
+          >
+            Tautan Penting
+          </h5>
+          <ul class="space-y-4 text-on-primary/80">
+            <li class="">
+              <a class="hover:text-secondary-fixed transition-colors" href="#"
+                >Kebijakan Privasi</a
+              >
+            </li>
+            <li class="">
+              <a class="hover:text-secondary-fixed transition-colors" href="#"
+                >Syarat &amp; Ketentuan</a
+              >
+            </li>
+            <li class="">
+              <a class="hover:text-secondary-fixed transition-colors" href="#"
+                >Peta Situs</a
+              >
+            </li>
+            <li class="">
+              <a class="hover:text-secondary-fixed transition-colors" href="#"
+                >Akses Anggota</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h5
+            class="text-secondary-fixed font-bold mb-6 uppercase tracking-widest text-sm"
+          >
+            Sekretariat
+          </h5>
+          <p class="text-on-primary/80 font-body-md leading-relaxed">
+            Gedung Perbankan Nasional, Lt. 12<br />
+            Jl. Jendral Sudirman Kav. 52-53<br />
+            Jakarta Selatan, 12190
+          </p>
+        </div>
+      </div>
+      <div class="border-t border-on-primary/10 py-8">
+        <div
+          class="max-w-container-max mx-auto px-margin-desktop text-center text-on-primary/60 text-sm"
+        >
+          © 2024 Forum Komunikasi Dewan Komisaris Bank Pembangunan Daerah
+          Seluruh Indonesia (FKDK BPDSI). Hak Cipta Dilindungi Undang-Undang.
+        </div>
+      </div>
+    </footer>
+    <script>
+      // Micro-interactions for video cards
+      document.querySelectorAll(".group").forEach((card) => {
+        card.addEventListener("mouseenter", () => {
+          const playIcon = card.querySelector(
+            '.material-symbols-outlined[data-icon="play_arrow"]',
+          );
+          if (playIcon) {
+            playIcon.parentElement.style.transform = "scale(1.1)";
+          }
+        });
+        card.addEventListener("mouseleave", () => {
+          const playIcon = card.querySelector(
+            '.material-symbols-outlined[data-icon="play_arrow"]',
+          );
+          if (playIcon) {
+            playIcon.parentElement.style.transform = "scale(1)";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

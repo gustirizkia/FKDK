@@ -1,0 +1,717 @@
+<!doctype html>
+<html lang="id" style="">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <title>FKDK BPDSI - Tokoh</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(233, 236, 239, 1);
+      }
+      .hero-gradient {
+        background: linear-gradient(135deg, #00347b 0%, #1e4b9a 100%);
+      }
+      .gold-border-top {
+        border-top: 4px solid #77591f;
+      }
+      .ambient-shadow {
+        box-shadow: 0px 4px 20px rgba(30, 75, 154, 0.08);
+      }
+      .watermark-bg {
+        position: relative;
+      }
+      .watermark-bg::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 600px;
+        height: 600px;
+        background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB1PC0wAEUkj0BJtE6OwlxnZTIV3foLvwNybroeHGfLOMHCBWZZI3d_k75MQ0fU9FWsheRzRdrSzADsFKSTjITpw9Sl-hN5snzP1eA65Qa3KnkNyCW4CE1VFHUM2vFvfyl9xrSqQkPjtzi-ON2msw2srjQTzM100IE6f-jvYV8zDYvTBW4_FuNEubE4ChuslsobP1b1FIPYOvVMQ4oU8djktfHnPdoUDSWEIFFpbBWhJRs_4EQBMHkXi51xw6Go_nycZ0NyrClESfK2");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0.035;
+        pointer-events: none;
+        z-index: 0;
+      }
+    </style>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              outline: "#747782",
+              "surface-container-lowest": "#ffffff",
+              "on-background": "#1a1c1e",
+              "error-container": "#ffdad6",
+              "surface-container-low": "#f3f3f6",
+              "surface-container": "#eeeef0",
+              "surface-variant": "#e2e2e5",
+              surface: "#f9f9fc",
+              "secondary-fixed-dim": "#e9c17c",
+              "surface-tint": "#335cab",
+              "primary-fixed": "#d9e2ff",
+              "surface-bright": "#f9f9fc",
+              "on-secondary-fixed": "#271900",
+              "outline-variant": "#c3c6d3",
+              "secondary-container": "#fdd48e",
+              "inverse-surface": "#2f3133",
+              "surface-container-highest": "#e2e2e5",
+              "on-primary": "#ffffff",
+              "primary-container": "#1e4b9a",
+              "on-tertiary-fixed-variant": "#004c68",
+              "on-tertiary-fixed": "#001e2c",
+              primary: "#00347b",
+              "on-primary-container": "#a5bfff",
+              "on-tertiary": "#ffffff",
+              "primary-fixed-dim": "#afc6ff",
+              "on-secondary-container": "#785a20",
+              "surface-dim": "#dadadc",
+              "tertiary-container": "#0d5471",
+              "tertiary-fixed": "#c3e8ff",
+              "tertiary-fixed-dim": "#95ceef",
+              "on-error": "#ffffff",
+              "on-secondary": "#ffffff",
+              secondary: "#77591f",
+              "inverse-primary": "#afc6ff",
+              error: "#ba1a1a",
+              "on-surface": "#1a1c1e",
+              tertiary: "#003c53",
+              "on-error-container": "#93000a",
+              "inverse-on-surface": "#f0f0f3",
+              "on-primary-fixed": "#001944",
+              "on-surface-variant": "#434651",
+              "surface-container-high": "#e8e8ea",
+              "secondary-fixed": "#ffdea8",
+              "on-secondary-fixed-variant": "#5d4208",
+              "on-tertiary-container": "#8ec7e8",
+              background: "#f9f9fc",
+              "on-primary-fixed-variant": "#124392",
+            },
+            borderRadius: {
+              DEFAULT: "0.125rem",
+              lg: "0.25rem",
+              xl: "0.5rem",
+              full: "0.75rem",
+            },
+            spacing: {
+              "container-max": "1280px",
+              "margin-mobile": "20px",
+              unit: "8px",
+              "margin-desktop": "64px",
+              gutter: "24px",
+            },
+            fontFamily: {
+              "display-lg": ["Manrope"],
+              "headline-lg": ["Manrope"],
+              "headline-lg-mobile": ["Manrope"],
+              "body-lg": ["IBM Plex Sans"],
+              "body-md": ["IBM Plex Sans"],
+              "label-sm": ["IBM Plex Sans"],
+              "headline-md": ["Manrope"],
+            },
+            fontSize: {
+              "display-lg": [
+                "48px",
+                {
+                  lineHeight: "56px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+              "headline-lg": [
+                "32px",
+                { lineHeight: "40px", fontWeight: "600" },
+              ],
+              "headline-lg-mobile": [
+                "24px",
+                { lineHeight: "32px", fontWeight: "600" },
+              ],
+              "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+              "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+              "label-sm": [
+                "12px",
+                {
+                  lineHeight: "16px",
+                  letterSpacing: "0.05em",
+                  fontWeight: "600",
+                },
+              ],
+              "headline-md": [
+                "24px",
+                { lineHeight: "32px", fontWeight: "600" },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-background text-on-surface font-body-md selection:bg-secondary-container selection:text-on-secondary-container"
+  >
+    <!-- TopNavBar -->
+    <header
+      class="bg-surface-container-lowest dark:bg-inverse-surface border-b border-outline-variant dark:border-outline shadow-sm full-width top-0 z-50 sticky"
+    >
+      <div
+        class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto"
+      >
+        <div class="flex items-center gap-4">
+          <img
+            alt="FKDK BPDSI Logo"
+            class="h-12 w-auto object-contain"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1PC0wAEUkj0BJtE6OwlxnZTIV3foLvwNybroeHGfLOMHCBWZZI3d_k75MQ0fU9FWsheRzRdrSzADsFKSTjITpw9Sl-hN5snzP1eA65Qa3KnkNyCW4CE1VFHUM2vFvfyl9xrSqQkPjtzi-ON2msw2srjQTzM100IE6f-jvYV8zDYvTBW4_FuNEubE4ChuslsobP1b1FIPYOvVMQ4oU8djktfHnPdoUDSWEIFFpbBWhJRs_4EQBMHkXi51xw6Go_nycZ0NyrClESfK2"
+          />
+          <span
+            class="font-display-lg text-headline-md font-bold text-primary dark:text-primary-fixed hidden sm:block"
+            >FKDK BPDSI WilTim Squad</span
+          >
+        </div>
+        <nav class="hidden lg:flex items-center gap-8 h-full">
+          <a
+            class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 scale-100 active:scale-95 transition-transform"
+            href="index.html"
+            >Beranda</a
+          >
+          <a
+            class="font-body-md text-body-md text-primary dark:text-secondary-fixed-dim border-b-2 border-secondary font-semibold hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 scale-100 active:scale-95 transition-transform"
+            href="tokoh.html"
+            >Profil Tokoh</a
+          >
+          <a
+            class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 scale-100 active:scale-95 transition-transform"
+            href="berita.html"
+            >Berita</a
+          >
+          <a
+            class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 scale-100 active:scale-95 transition-transform"
+            href="video.html"
+            >Video</a
+          >
+          <a
+            class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 scale-100 active:scale-95 transition-transform"
+            href="kegiatan.html"
+            >Galleri Kegiatan</a
+          >
+        </nav>
+        <div class="flex items-center gap-4">
+          <button
+            class="bg-primary text-on-primary px-6 py-2 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+          >
+            Hubungi Kami
+          </button>
+          <button class="lg:hidden text-on-surface p-2">
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <!-- Hero Section Profile -->
+      <section class="w-full overflow-hidden">
+        <img
+          src="img/banner-tokoh-fkdk.png"
+          alt="Banner Pengurus FKDK-BPDSI Wilayah Timur Periode 2023 - 2026"
+          class="w-full h-auto block"
+        />
+      </section>
+      <!-- Search & Filter Bar -->
+      <section
+        class="max-w-container-max mx-auto px-margin-desktop -mt-10 relative z-20"
+      >
+        <div
+          class="glass-card p-6 rounded-xl ambient-shadow flex flex-wrap gap-4 items-center justify-between"
+        >
+          <div class="flex-1 min-w-[300px]">
+            <div class="relative">
+              <span
+                class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline"
+                >search</span
+              >
+              <input
+                class="w-full pl-12 pr-4 py-3 bg-surface-container-low border border-outline-variant rounded-lg focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all font-body-md"
+                placeholder="Cari nama atau jabatan komisaris..."
+                type="text"
+              />
+            </div>
+          </div>
+          <div class="flex gap-3">
+            <button
+              class="flex items-center gap-2 px-6 py-3 border border-outline-variant rounded-lg font-semibold text-on-surface-variant hover:bg-surface-container-high transition-colors"
+            >
+              <span class="material-symbols-outlined">filter_list</span>
+              Filter Wilayah
+            </button>
+            <button
+              class="flex items-center gap-2 px-6 py-3 border border-outline-variant rounded-lg font-semibold text-on-surface-variant hover:bg-surface-container-high transition-colors"
+            >
+              <span class="material-symbols-outlined">sort</span>
+              Urutkan
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- Leadership Grid -->
+      <section
+        class="py-20 max-w-container-max mx-auto px-margin-desktop watermark-bg"
+      >
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter relative z-10"
+        >
+          <a
+            href="detail-tokoh.html"
+            class="lg:col-span-2 group flex flex-col md:flex-row bg-white border border-outline-variant rounded-xl overflow-hidden ambient-shadow hover:-translate-y-1 transition-all duration-300 gold-border-top"
+          >
+            <div class="md:w-2/5 h-80 md:h-full overflow-hidden relative">
+              <img
+                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                data-alt="Formal executive portrait of a male leader sitting in a refined office setting. The composition is balanced and elegant, featuring a deep navy blue background and professional high-key lighting. He represents institutional authority and professional excellence, wearing a classic business suit and a warm, confident expression."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5_-epNfmd_OQCeO8qDgLcJnXXVEUxEo9dUHwxQ43CGhOxgC-OQUVS7-5lpvl2C3i5-fgNiqtMgOS2mMGRJvJJL9zKDh0kOmdVC7P4fts6nMgxsk5ujxBTbpjmBovxhjkUMS4CnW-G5XY1GtckbBHwbJPGQ1xkRIG5SW4CZ5IDoVWiTuQRsAFkYIUS2ZJ2HqR35aazUPGq5frT06clnb6pwE3PjoAuC7fFpAf00fPGg79l8BfIWJ0zMIInGRFdwUxkeEwfwF4lCh2I"
+              />
+            </div>
+            <div class="md:w-3/5 p-10 flex flex-col justify-center">
+              <span
+                class="inline-block px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm rounded-full mb-4 w-fit"
+              >
+                Koordinator Wilayah
+              </span>
+              <h3
+                class="font-headline-md text-headline-md text-primary mb-2 text-2xl lg:text-3xl"
+              >
+                Victor Abraham Abaidata, SH
+              </h3>
+              <p class="text-on-surface-variant font-body-md mb-6 text-lg">
+                Koordinator Wilayah Komisaris Independen Bank Papua Komisaris
+              </p>
+              <p
+                class="text-on-surface-variant font-body-md mb-8 leading-relaxed"
+              >
+                Warga Negara Indonesia, kelahiran Abepura, Kota Jayapura, 6 Mei
+                1977. Beliau menjabat untuk periode pertama (08 Agustus 2024
+                s.d. 07 Agustus 2028). Memiliki latar belakang pendidikan Ilmu
+                Hukum dan pengalaman luas sebagai Koordinator Staf Khusus Pj.
+                Gubernur Papua Barat serta Analis Daerah di Kemenko Polhukam RI.
+              </p>
+              <span
+                class="inline-flex items-center gap-2 text-secondary font-bold hover:gap-3 transition-all underline decoration-2 underline-offset-4"
+              >
+                Biografi Lengkap
+                <span class="material-symbols-outlined text-sm"
+                  >arrow_forward</span
+                >
+              </span>
+            </div>
+          </a>
+
+          <!-- Profile Card 3 -->
+          <a
+            href="detail-tokoh.html"
+            class="group flex flex-col bg-white border border-outline-variant rounded-xl overflow-hidden ambient-shadow hover:-translate-y-1 transition-all duration-300 gold-border-top"
+          >
+            <div class="h-80 overflow-hidden relative">
+              <img
+                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                data-alt="High-quality portrait of a seasoned male professional in a gray tailored suit, exuding wisdom and institutional authority. The setting is a bright, high-end boardroom with blurred windows showing a city skyline. The lighting is balanced and professional. The overall atmosphere is one of prestige, trust, and national stability."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpYCEtvI_PXe5NBCyhs_Og437P26hT6TduRhk1dKm2LqkGEAX-DRgpcJFIlMmpuQKTX5I1j3NrBIQR_sdt5Giq6u1Gzc_1Q_M-lSmWOuhVtqipmP8rAVwEqRrspFy7gZrEh-VrK_9qun4IKTJJTXJYCKRQYWGxmxI9tkmkQbL7_tJUx0vHuvwrjXdZepLSSxyH0TFLcYkaKB61grPbHqt2QdrlOVUsR0SCbq0cim80K2pEa8pNM8i9xlgV0y_kjafm7z3U7YsFxsQT"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6"
+              >
+                <span class="text-on-primary font-semibold text-sm"
+                  >Lihat Profil Lengkap →</span
+                >
+              </div>
+            </div>
+            <div class="p-8 flex-1 flex flex-col">
+              <span
+                class="inline-block px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm rounded-full mb-4 w-fit"
+                >Sekretaris</span
+              >
+              <h3 class="font-headline-md text-headline-md text-primary mb-1">
+                La Ode Rahmat, S.H
+              </h3>
+              <p
+                class="text-on-surface-variant font-body-md mb-6 leading-tight"
+              >
+                Sekretaris Komisaris Bank Sultra
+              </p>
+              <div class="border-t border-outline-variant pt-6 mt-auto"></div>
+            </div>
+          </a>
+
+          <!-- Profile Card 1 -->
+          <a
+            href="detail-tokoh.html"
+            class="group flex flex-col bg-white border border-outline-variant rounded-xl overflow-hidden ambient-shadow hover:-translate-y-1 transition-all duration-300 gold-border-top"
+          >
+            <div class="h-80 overflow-hidden relative">
+              <img
+                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                data-alt="A formal corporate portrait of a professional male executive in a sharp navy blue business suit. He is standing against a clean, architectural office background with soft daylight. The lighting is sophisticated and bright, highlighting a sense of leadership and trustworthiness. The overall aesthetic is professional, modern, and aligned with banking industry standards."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7NZc8Pm9gmTY1c-QIi_mSJYgDdKahl7c_D5iVRz_fxEWgqw6pkogejjuAgnPvg3TBGnYlG8j8ZBoJe-4rkbdE6r8KTXVsJMZv6QV66VbehWSezUQ7R6_8FP7n0yf2uga6DhO2Uozz_Bn8Bj0GJdwQPP31ybu8_k1nHzDL097fvYBm-_C-ZjcQOA_vLCwTCJLxgqis6cBa7fkmuenNqJS5GdTJtQv75Sjfux2sfqIuHFNQEM1xp7cbPkFpP0KND5EeYYVBA1V253A5"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6"
+              >
+                <span class="text-on-primary font-semibold text-sm"
+                  >Lihat Profil Lengkap →</span
+                >
+              </div>
+            </div>
+            <div class="p-8 flex-1 flex flex-col">
+              <span
+                class="inline-block px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm rounded-full mb-4 w-fit"
+              >
+                Ketua Bid. Pengembangan Profesi
+              </span>
+              <h3 class="font-headline-md text-headline-md text-primary mb-1">
+                Prof. Dr. H. Muslihun, M.Ag
+              </h3>
+              <p
+                class="text-on-surface-variant font-body-md mb-6 leading-tight"
+              >
+                Ketua Bid. Pengembangan Profesi Komisaris Independen Bank NTBS
+              </p>
+              <div class="border-t border-outline-variant pt-6 mt-auto"></div>
+            </div>
+          </a>
+          <!-- Profile Card 2 -->
+          <a
+            href="detail-tokoh.html"
+            class="group flex flex-col bg-white border border-outline-variant rounded-xl overflow-hidden ambient-shadow hover:-translate-y-1 transition-all duration-300 gold-border-top"
+          >
+            <div class="h-80 overflow-hidden relative">
+              <img
+                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                data-alt="A professional portrait of a senior female executive in formal business attire, reflecting authority and elegance. She is positioned in a modern corporate lobby with soft, ambient lighting. The background features clean glass elements and warm wood tones. The shot conveys a personality of institutional stability and professional excellence in the banking sector."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCreKyP1AdgIPfXVCdfzfxWm6UkmnqR4KkS1WwyNWJVLOMtEQ5ubHWsRWG9MbKHlLUru9rCZYPX0-eKkPTJorJlsemPDihoIxTiWYQg3a9zfA6K6M9ccCWhD2T3mFUZ3vpj_3TLp9CVtoxnrXXxr97VukJPl5sDF_IlirX_o5I6j9PbiyMHsTyJPuGi1XEnfxEVy1qc3rA_lHZ-5eZTPyq2WfeX-m8eiiTiBZXRxkqi2QQWmZMAD_NpHkWkykO7mn-xo0XC48zpEi93"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6"
+              >
+                <span class="text-on-primary font-semibold text-sm"
+                  >Lihat Profil Lengkap →</span
+                >
+              </div>
+            </div>
+            <div class="p-8 flex-1 flex flex-col">
+              <span
+                class="inline-block px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm rounded-full mb-4 w-fit"
+              >
+                Ketua Bid. Pengembangan Organisasi
+              </span>
+              <h3 class="font-headline-md text-headline-md text-primary mb-1">
+                Prof. Dr. Drs. Frans Gana, M.Si
+              </h3>
+              <p
+                class="text-on-surface-variant font-body-md mb-6 leading-tight"
+              >
+                Ketua Bid. Pengembangan Organisasi Komisaris Independen Bank NTT
+              </p>
+              <div class="border-t border-outline-variant pt-6 mt-auto"></div>
+            </div>
+          </a>
+
+          <!-- More Cards in Asymmetric Layout -->
+
+          <a
+            href="detail-tokoh.html"
+            class="group flex flex-col bg-white border border-outline-variant rounded-xl overflow-hidden ambient-shadow hover:-translate-y-1 transition-all duration-300 gold-border-top"
+          >
+            <div class="h-80 overflow-hidden relative">
+              <img
+                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                data-alt="Professional corporate headshot of a business leader in a formal dark suit. The backdrop is a clean, modern workspace with blurred office elements and natural light coming from a large window. The lighting is soft and professional, creating an atmosphere of reliability and expertise. The aesthetic is clean and corporate."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDrjzdeJTyh21zz6LlslJ8ISov8rYro0swd4dLHn9iSVYAdFuEk2vJ7t0s3-wuYU6gaKEeWyeSGSx3mpQYf4isnqQcD3SyVD_7iVymeCAlwX1h8g2NqSCLNyVGe12W5kbfiQIXhlSBlAjoQFJbZgK0T7EwlGud56HgGn1Q1DhKSy7DpH4Hzwq5SThasIKZX5-uJ1E29wTEQKCB2GStAa2IG89WaUdBqUTmGAY4b__LGXwROa2pJbcW928A4K9Fcqt23WXIOT7VM8BG"
+              />
+            </div>
+            <div class="p-8 flex-1">
+              <span
+                class="inline-block px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm rounded-full mb-4 w-fit"
+                >Bendahara</span
+              >
+              <h3 class="font-headline-md text-headline-md text-primary mb-1">
+                Dr. Nobi Ventje Berti Kaligis, SE., MM
+              </h3>
+              <p
+                class="text-on-surface-variant font-body-md mb-4 leading-tight"
+              >
+                Bendahara Komisaris Independen Bank Sulteng
+              </p>
+            </div>
+          </a>
+        </div>
+      </section>
+      <section
+        class="bg-surface-container-low py-20 px-margin-desktop border-y border-outline-variant/30"
+      >
+        <div class="max-w-container-max mx-auto text-center relative z-10">
+          <h2 class="font-display-lg text-headline-lg text-primary mb-4">
+            9 BPD Wilayah Timur
+          </h2>
+          <p
+            class="font-body-md text-body-md text-on-surface-variant mb-16 max-w-2xl mx-auto"
+          >
+            Pilar Kekuatan Ekonomi Indonesia Bagian Timur yang berkomitmen
+            membangun daerah melalui layanan perbankan yang kokoh dan
+            berkelanjutan.
+          </p>
+          <div
+            class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8"
+          >
+            <div
+              class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/30 flex items-center justify-center h-24 hover:shadow-md transition-shadow"
+            >
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnlW3RD6qIhBF8ENNSbKdiJmBr-faD7wTZZbRfQdG7tZcQsk49C3GBD_QXXzRiSLQzNzwoXW6FX14JGwdkFealdYmtrxcxT_SOG4wcaeber6Lqu-GyD_R-jt9YM0RLsz-4D5JBNocPdlbDS4nQiD9Bcgql-sMzKWL3YvF516-zKZuBHF4utskK3U2FegtgEzzUoq8jfN2j71zGyw5EwaZ-iMiM1MaDXPKk2F-sNpbETQfTG_pgf4SNX0Ux1YTOor4Llhq2WmOKxxXd"
+                alt="Bank Papua"
+                class="max-h-full w-auto object-contain"
+              />
+            </div>
+            <div
+              class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/30 flex items-center justify-center h-24 hover:shadow-md transition-shadow"
+            >
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXA4392TYmmw-9_6PHJNZafG9PnfG0RmgTsFvj4zeebFq-cckmtHYIYSzJyhglHtKs_4XZIiqchZATI0AJTVy22SHLJek8x2lNSGDH40_SoJ2vZBAiCLvaNG74rqTH2ysIMMF0FENwNk84xwq1GioZr4fvvPlPm3cUb6kSbwPcjYA1eKpRN_GGLuumhtH1uOAJDkeJZjPgVg_SUyeb9Ub787SnDkGrW8YttvuyiX3zD7PcUspM5Xg3Lm4NuFzJAumysIJRPlpD15Uu"
+                alt="Bank NTT"
+                class="max-h-full w-auto object-contain"
+              />
+            </div>
+            <div
+              class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/30 flex items-center justify-center h-24 hover:shadow-md transition-shadow"
+            >
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7pHQDeqTcHzrmry2grJsdxzvCpoQXhEiF1Limg-Cf-qNswvQgDgwmjCZCqw4aaYsBYlk74nezWHI7rBmMjLXbIHBlOeAfe-dcarCp6G5f2nX1Ty9KQ0A69fP2KllDkZM5rUZe7gpv1NJmxpyqyqtEBw2K-TXN-3MHpmAH1PRTXUPIABAoOb1zp54UCWfGXfJSz4s1Dlq5fJOnGEbAKAhz28jZo_mPNThMRTCicI5OBqKVa-gTRU9zzXG9jDA9Rm2AWB0eUFqwW1z9"
+                alt="Bank Sulteng"
+                class="max-h-full w-auto object-contain"
+              />
+            </div>
+            <div
+              class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/30 flex items-center justify-center h-24 hover:shadow-md transition-shadow"
+            >
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLOAIaou83MDXNMKsvds4JCqsZWXbxIMr17FNAjDyKdLsw238bhSnRzA84KtIDea9WOsknJfAfGid5a33KMtW304c1lsFNHnxsPZjxjsFXYzhwlTmzHBuKSzWwsnP3OPO41BBUpG5mrmdGy9eX0F7h8p-E5l_bqV3CceMkcoks9u9Er8TiXgks4UChQM081TnCAsLoNNsV0z-3_t4R9HU9UGovV80Sp2owrWl5HyxcW-5PTleEKoayhte74cahWHzmmRq_EorwFuEG"
+                alt="Bank Sultra"
+                class="max-h-full w-auto object-contain"
+              />
+            </div>
+            <div
+              class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/30 flex items-center justify-center h-24 hover:shadow-md transition-shadow"
+            >
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlWLoPm4nPBxVu66auc0kSL3LvKKEIs_yWkKt5dAKRiCqzBXDiS3eimhzVD8AvY4_XpWKiGoctCjv0e2S_03SCZwf_YzTstSkzv0zyPkiuqCX6WC8wk0ZURhQhjsvMVrCxSuOXA7ycustkEzlkWEWUJDqxMFrnX8BwjbJ5Mre_rtZxajakJGxaPg-xumtKsjm7PYbT8E0EtTPePA-rBv6j6pBbcrmXckm0XLPNPoWu03H4tZJsj0QUSQrBSoeqpMd76AtGOg5OHyeg"
+                alt="Bank Sulselbar"
+                class="max-h-full w-auto object-contain"
+              />
+            </div>
+            <div
+              class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/30 flex items-center justify-center h-24 hover:shadow-md transition-shadow"
+            >
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4rV-aA6t5EIYwCWo-fvI80WqH6eGTTTJj3ibkxWGnqp7BaX82TWog90LDA7rXJwoi9sKSKP7YryqlqAfFErGTcQjFBk4MShs15FkzFs7LWSAkEyBmzL6J2axXFWU2bQamRk4uyRwdMK8hrWJ6wFmOXfVKgKtfAGIMLwFEl74k5GaOv6tg9fIN4ZH7jOSnDOJCOVCf20zP6SO6gdFOJfoAX2myv32ZDT3jhqaKYzX3zXHwzBxliIsqPVmum99SliRwWlW_iMI_6k_S"
+                alt="BSG"
+                class="max-h-full w-auto object-contain"
+              />
+            </div>
+            <div
+              class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/30 flex items-center justify-center h-24 hover:shadow-md transition-shadow"
+            >
+              <img
+                src="https://admin.bankntbsyariah.co.id/build/assets/logo_ntbs-BSIF94NC.png"
+                alt="BSG"
+                class="max-h-full w-auto object-contain"
+              />
+            </div>
+            <div
+              class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/30 flex items-center justify-center h-24 hover:shadow-md transition-shadow"
+            >
+              <img
+                src="https://bankmalukumalut.co.id/api/Simpanan/layanan-perbendaharaan.jpeg"
+                alt="BSG"
+                class="max-h-full w-auto object-contain"
+              />
+            </div>
+            <div
+              class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/30 flex items-center justify-center h-24 hover:shadow-md transition-shadow"
+            >
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREZpPnjOEVPJKnUPP0ultwxvweC_ZhmQZLJQ&s"
+                alt="BSG"
+                class="max-h-full w-auto object-contain"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer
+      class="bg-primary dark:bg-on-background border-t-4 border-secondary full-width bottom-0"
+    >
+      <div
+        class="grid grid-cols-1 md:grid-cols-4 gap-gutter py-16 px-margin-desktop max-w-container-max mx-auto"
+      >
+        <div class="col-span-1 md:col-span-2">
+          <div class="flex items-center gap-4 mb-6">
+            <img
+              alt="FKDK BPDSI Logo"
+              class="h-14 w-auto brightness-0 invert opacity-90"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7NZc8Pm9gmTY1c-QIi_mSJYgDdKahl7c_D5iVRz_fxEWgqw6pkogejjuAgnPvg3TBGnYlG8j8ZBoJe-4rkbdE6r8KTXVsJMZv6QV66VbehWSezUQ7R6_8FP7n0yf2uga6DhO2Uozz_Bn8Bj0GJdwQPP31ybu8_k1nHzDL097fvYBm-_C-ZjcQOA_vLCwTCJLxgqis6cBa7fkmuenNqJS5GdTJtQv75Sjfux2sfqIuHFNQEM1xp7cbPkFpP0KND5EeYYVBA1V253A5"
+            />
+            <span class="font-display-lg text-headline-md text-on-primary block"
+              >FKDK BPDSI WilTim Squad</span
+            >
+          </div>
+          <p
+            class="font-body-md text-body-md text-on-primary/80 max-w-md leading-relaxed"
+          >
+            Forum Komunikasi Dewan Komisaris Bank Pembangunan Daerah Seluruh
+            Indonesia berkomitmen memperkuat tata kelola perbankan demi kemajuan
+            ekonomi daerah yang berkelanjutan.
+          </p>
+        </div>
+        <div>
+          <h4
+            class="text-secondary-fixed font-bold mb-6 uppercase tracking-wider text-sm"
+          >
+            Navigasi
+          </h4>
+          <ul class="space-y-4">
+            <li class="">
+              <a
+                class="text-on-primary/80 hover:text-secondary-fixed transition-colors"
+                href="tokoh.html"
+                >Profil Tokoh</a
+              >
+            </li>
+            <li class="">
+              <a
+                class="text-on-primary/80 hover:text-secondary-fixed transition-colors"
+                href="#"
+                >Berita Terkini</a
+              >
+            </li>
+            <li class="">
+              <a
+                class="text-on-primary/80 hover:text-secondary-fixed transition-colors"
+                href="#"
+                >Agenda Kegiatan</a
+              >
+            </li>
+            <li class="">
+              <a
+                class="text-on-primary/80 hover:text-secondary-fixed transition-colors"
+                href="#"
+                >Peta Situs</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4
+            class="text-secondary-fixed font-bold mb-6 uppercase tracking-wider text-sm"
+          >
+            Legalitas
+          </h4>
+          <ul class="space-y-4">
+            <li class="">
+              <a
+                class="text-on-primary/80 hover:text-secondary-fixed transition-colors"
+                href="#"
+                >Kebijakan Privasi</a
+              >
+            </li>
+            <li class="">
+              <a
+                class="text-on-primary/80 hover:text-secondary-fixed transition-colors"
+                href="#"
+                >Syarat &amp; Ketentuan</a
+              >
+            </li>
+            <li class="">
+              <a
+                class="text-on-primary/80 hover:text-secondary-fixed transition-colors"
+                href="#"
+                >Akses Anggota</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="border-t border-white/10 py-8 px-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4"
+      >
+        <p
+          class="font-body-md text-body-md text-on-primary/60 text-center md:text-left"
+        >
+          © 2024 Forum Komunikasi Dewan Komisaris Bank Pembangunan Daerah
+          Seluruh Indonesia (FKDK BPDSI). Hak Cipta Dilindungi Undang-Undang.
+        </p>
+        <div class="flex gap-4">
+          <a
+            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-on-primary hover:bg-secondary transition-colors"
+            href="#"
+          >
+            <span class="material-symbols-outlined text-xl">language</span>
+          </a>
+          <a
+            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-on-primary hover:bg-secondary transition-colors"
+            href="#"
+          >
+            <span class="material-symbols-outlined text-xl">mail</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      // Simple search interaction
+      const searchInput = document.querySelector('input[type="text"]');
+      const profileCards = document.querySelectorAll(
+        ".group.flex.flex-col.bg-white",
+      );
+
+      searchInput.addEventListener("input", (e) => {
+        const term = e.target.value.toLowerCase();
+        profileCards.forEach((card) => {
+          const name = card.querySelector("h3").textContent.toLowerCase();
+          const title = card.querySelector("p").textContent.toLowerCase();
+          if (name.includes(term) || title.includes(term)) {
+            card.style.display = "flex";
+            card.style.opacity = "1";
+          } else {
+            card.style.display = "none";
+            card.style.opacity = "0";
+          }
+        });
+      });
+
+      // Sticky header opacity on scroll
+      window.addEventListener("scroll", () => {
+        const header = document.querySelector("header");
+        if (window.scrollY > 20) {
+          header.classList.add("shadow-md");
+        } else {
+          header.classList.remove("shadow-md");
+        }
+      });
+    </script>
+  </body>
+</html>

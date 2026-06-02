@@ -1,0 +1,624 @@
+<!doctype html>
+
+<html class="light" lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Galeri Kegiatan - FKDK BPDSI Wilayah Timur</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=IBM+Plex+Sans:wght@400;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed": "#c3e8ff",
+              "on-surface": "#1a1c1e",
+              "surface-container-lowest": "#ffffff",
+              primary: "#00347b",
+              "surface-tint": "#335cab",
+              "surface-container-highest": "#e2e2e5",
+              "secondary-container": "#fdd48e",
+              "on-tertiary-container": "#8ec7e8",
+              "on-secondary-fixed-variant": "#5d4208",
+              "secondary-fixed-dim": "#e9c17c",
+              "tertiary-container": "#0d5471",
+              "primary-fixed": "#d9e2ff",
+              "on-background": "#1a1c1e",
+              "inverse-surface": "#2f3133",
+              "surface-dim": "#dadadc",
+              "surface-container": "#eeeef0",
+              "on-secondary-fixed": "#271900",
+              "on-secondary-container": "#785a20",
+              surface: "#f9f9fc",
+              "outline-variant": "#c3c6d3",
+              "inverse-primary": "#afc6ff",
+              "on-surface-variant": "#434651",
+              "on-primary-fixed": "#001944",
+              "on-error": "#ffffff",
+              "surface-variant": "#e2e2e5",
+              "on-tertiary-fixed-variant": "#004c68",
+              "tertiary-fixed-dim": "#95ceef",
+              "on-primary-container": "#a5bfff",
+              "surface-container-low": "#f3f3f6",
+              outline: "#747782",
+              "on-tertiary-fixed": "#001e2c",
+              "surface-container-high": "#e8e8ea",
+              "on-secondary": "#ffffff",
+              "on-error-container": "#93000a",
+              "surface-bright": "#f9f9fc",
+              "primary-container": "#1e4b9a",
+              "error-container": "#ffdad6",
+              "inverse-on-surface": "#f0f0f3",
+              error: "#ba1a1a",
+              tertiary: "#003c53",
+              secondary: "#77591f",
+              "on-primary-fixed-variant": "#124392",
+              "on-primary": "#ffffff",
+              "secondary-fixed": "#ffdea8",
+              "primary-fixed-dim": "#afc6ff",
+              background: "#f9f9fc",
+              "on-tertiary": "#ffffff",
+            },
+            borderRadius: {
+              DEFAULT: "0.125rem",
+              lg: "0.25rem",
+              xl: "0.5rem",
+              full: "0.75rem",
+            },
+            spacing: {
+              gutter: "24px",
+              "margin-mobile": "20px",
+              unit: "8px",
+              "margin-desktop": "64px",
+              "container-max": "1280px",
+            },
+            fontFamily: {
+              "label-sm": ["IBM Plex Sans"],
+              "headline-lg": ["Manrope"],
+              "body-md": ["IBM Plex Sans"],
+              "body-lg": ["IBM Plex Sans"],
+              "headline-md": ["Manrope"],
+              "display-lg": ["Manrope"],
+              "headline-lg-mobile": ["Manrope"],
+            },
+            fontSize: {
+              "label-sm": [
+                "12px",
+                {
+                  lineHeight: "16px",
+                  letterSpacing: "0.05em",
+                  fontWeight: "600",
+                },
+              ],
+              "headline-lg": [
+                "32px",
+                { lineHeight: "40px", fontWeight: "600" },
+              ],
+              "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+              "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+              "headline-md": [
+                "24px",
+                { lineHeight: "32px", fontWeight: "600" },
+              ],
+              "display-lg": [
+                "48px",
+                {
+                  lineHeight: "56px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+              "headline-lg-mobile": [
+                "24px",
+                { lineHeight: "32px", fontWeight: "600" },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      .gallery-card:hover .gallery-overlay {
+        opacity: 1;
+      }
+      .gallery-card:hover img {
+        transform: scale(1.05);
+      }
+      .custom-shadow {
+        box-shadow: 0px 4px 20px rgba(30, 75, 154, 0.08);
+      }
+      .slide {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+        z-index: 0;
+      }
+      .slide.active {
+        opacity: 1;
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+    <header
+      class="bg-surface-container-lowest dark:bg-inverse-surface border-b border-outline-variant dark:border-outline shadow-sm full-width top-0 z-50 sticky"
+    >
+      <div
+        class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto"
+      >
+        <div class="flex items-center gap-4">
+          <img
+            alt="FKDK BPDSI Logo"
+            class="h-12 w-auto object-contain"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1PC0wAEUkj0BJtE6OwlxnZTIV3foLvwNybroeHGfLOMHCBWZZI3d_k75MQ0fU9FWsheRzRdrSzADsFKSTjITpw9Sl-hN5snzP1eA65Qa3KnkNyCW4CE1VFHUM2vFvfyl9xrSqQkPjtzi-ON2msw2srjQTzM100IE6f-jvYV8zDYvTBW4_FuNEubE4ChuslsobP1b1FIPYOvVMQ4oU8djktfHnPdoUDSWEIFFpbBWhJRs_4EQBMHkXi51xw6Go_nycZ0NyrClESfK2"
+          />
+          <span
+            class="font-display-lg text-headline-md font-bold text-primary dark:text-primary-fixed hidden sm:block"
+            >FKDK BPDSI WilTim Squad</span
+          >
+        </div>
+        <nav class="hidden lg:flex items-center gap-8 h-full">
+          <a
+            class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 scale-100 active:scale-95 transition-transform"
+            href="index.html"
+            >Beranda</a
+          >
+          <a
+            class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 scale-100 active:scale-95 transition-transform"
+            href="tokoh.html"
+            >Profil Tokoh</a
+          >
+          <a
+            class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 scale-100 active:scale-95 transition-transform"
+            href="berita.html"
+            >Berita</a
+          >
+          <a
+            class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 scale-100 active:scale-95 transition-transform"
+            href="video.html"
+            >Video</a
+          >
+          <a
+            class="font-body-md text-body-md text-primary dark:text-secondary-fixed-dim border-b-2 border-secondary font-semibold hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 scale-100 active:scale-95 transition-transform"
+            href="kegiatan.html"
+            >Galleri Kegiatan</a
+          >
+        </nav>
+        <div class="flex items-center gap-4">
+          <button
+            class="bg-primary text-on-primary px-6 py-2 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+          >
+            Hubungi Kami
+          </button>
+          <button class="lg:hidden text-on-surface p-2">
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="">
+      <!-- Hero Section with Full Screen Slider -->
+      <section
+        class="relative min-h-[85vh] flex items-center justify-center px-margin-desktop overflow-hidden"
+      >
+        <!-- Full Screen Slider Background -->
+        <div class="absolute inset-0 bg-primary">
+          <div class="slide active">
+            <img
+              alt="Event Slide 1"
+              class="w-full h-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0Z-IhD70X-c291c2-po_mXQlS8Ua4hCDupasOd_fP8TXC0lmLeHNKNRRXMWbg62nbvjOjGtRr4Lm3rJsqoSwWeakphiSWCsG5MkqXgJKsxt6G4JSI9hHEOOJ7b97sLMZrzOVRFalWBAxYnrYDggCupUYKMJKB5F1kIWNLehPKfNXZ1Dzrdkcd8mKsfv-kLCpjetK9Uo7MRBRft5dt0JCmNaNyf7bg25_U8LWUvAIGVUT1O_CNxhPxA0myHaF_ONBxGDDrq7ThNCQv"
+            />
+          </div>
+          <div class="slide">
+            <img
+              alt="Event Slide 2"
+              class="w-full h-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjoBFgrJ7fEMzU4L8_xkOWCZDjt-CSIaY6ENZPYQvuxNqNH4RmluLa5kCDbTBgEiAOgjvaGa8zt3mPexqU71O9SeFDQrpRZQPtsrkzs-OB9Ot0HxVfaetKAvh9X3CpElbF29COQxKpQ-6I9XtvY4WHgcRTkEG3fm0J29SqVX0cm2Ffb1dJrzW83IwR1PnEs5i-A6DqIkg19lCMZr6P__OgD3BGErWDCCDg6FZMVHK_KwRBd3ac1MViKnp5V-AuXHqC2FGAW4T8smUA"
+            />
+          </div>
+          <div class="slide">
+            <img
+              alt="Event Slide 3"
+              class="w-full h-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtaUkjR5gyLr_97851rzWz4Nvx53rshj8alwbYpxkIX1A_UOtuIVZcJcmsU0kyLrktrm4Iz2u5U5FtAKcv20KEsQrMM8QY5XXmLsj9XOjheVBMnRFwgMY7N9jCoN2DxX2-b0xW32xxW65TFFOFjeVVTO5K3phvyZGUfMEhOVEye7KNSxKMRGNEOcNgd9sGOMV7Gmi5nOmmwbeoaeUVoaUEkwD9ftpJYwpyczAR-qmgRIUk0tov_HKt_jPUPTtGpTBUl_ohY2_EZfhV"
+            />
+          </div>
+          <div class="slide">
+            <img
+              alt="Event Slide 4"
+              class="w-full h-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHm2Uk28Mav_7G5ZvseubO4wp3W2RUGhqJzd6XEFtxaKNNuNsQJxQY0MOVvvsSBwbpLvNkNUGEYA91fGLcbQzMsmgZNUIuduwEiE-SOW5ju0Tz0cd3wLC1UybrBxkJEg-SGKWgRC4AEl7J562KlrM-T-xnpIQaSKfIk6uLhLlRR0ogsfj4l8oJxMhNuRRMk2a23ih-9x__lBvcj9wjfKXXIogsBkr-iRE4z6RMM_yFWO0RYTnEWLyESb7qSOE4aXwoMe0cS2IVE_Rg"
+            />
+          </div>
+          <div class="slide">
+            <img
+              alt="Event Slide 5"
+              class="w-full h-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMZD_WJ0ZywtrJGLoEI_nf3ZgaG3HGpon-qLxa9Pa8dLwVHmfscBXp9T70ijlYNzM1SwDcSY9VT0CUub9K-s0WRlcamisu6Uz77wn5O_16J01gP8mirWf3ebXhnK8QMID7vqi2b8E1JaOdOTDg5ErXU2ELMWrrrIexgSNLk-9XT_1Zklb5y9zFekvrBFbZNtv8CLMI4WJDG-OGykAMidpUMhC1zvAKlhS5kQwv0qBw3eYshIow5eWH_6IV_KdFipgoU-bn54LiTciq"
+            />
+          </div>
+          <div class="slide">
+            <img
+              alt="Event Slide 6"
+              class="w-full h-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnEnYNpXnmddrazpy1ZYVQHSxYdvOBxkibo6BxTXQGHN4fdg5POEXDTQG46WDJcrlot-RQghqE0drUaaAGtHT8FlPZiY28AFhzSL-RAGm7ix3mbgItxAMnoOm0TYgbXRDD0oeFEfSmwhi6uzpZ1qJsF2bR55ED8wnb1aISs9cAlETiI2pGi4Z36BX2JrFIsA4h-L268U4EhL_QHJzlhdqE_8d90JdbkA1yY2JzgUOU--GoAzfWXY183NZ6FZ__hoUwqvxcBdrQucki"
+            />
+          </div>
+          <div class="slide">
+            <img
+              alt="Event Slide 7"
+              class="w-full h-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCk6KlVgsEKLdZ9j0SRQ06tHSiNvdzu8M_CXob1y9gKrN5glFB0UBGOeE825looPIh2HAoSIYLHB_E4TJkssQSAYdIOkvUGrEzciHBeHH8hqrzkPpWE542q8aWrmbHWRFUQqKuoLXN-xq2kLpeS5s8Ggg2NT55N6IcbnMp4BY9EFFWcOMVd1GDeUInkxPhMEaHNbGZJwxW8N7KhyuuenX_sjodNGc0n3DXjGoEiD2esyz8urPHYtIWctOpZl9A37pvNIPAGEnXJgjiv"
+            />
+          </div>
+          <!-- Dark Overlay -->
+          <div
+            class="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/40 to-primary/80 z-[2]"
+          ></div>
+        </div>
+        <!-- Hero Content -->
+        <div class="relative z-10 max-w-5xl mx-auto py-20">
+          <div class="flex flex-col items-center text-center">
+            <div class="inline-flex items-center gap-3 mb-8">
+              <div class="h-[1px] w-8 bg-secondary-fixed"></div>
+              <span
+                class="font-label-sm text-secondary-fixed uppercase tracking-[0.2em]"
+                >Arsip Visual &amp; Dokumentasi</span
+              >
+              <div class="h-[1px] w-8 bg-secondary-fixed"></div>
+            </div>
+            <h1
+              class="font-display-lg text-display-lg md:text-[64px] md:leading-[1.1] text-white mb-8 tracking-tight max-w-4xl drop-shadow-lg"
+            >
+              Galeri Kegiatan
+              <span class="text-secondary-fixed">FKDK BPDSI</span> Wilayah Timur
+            </h1>
+            <p
+              class="font-body-lg text-white/90 max-w-2xl mx-auto leading-relaxed mb-12 drop-shadow-md"
+            >
+              Dokumentasi resmi rangkaian rapat koordinasi, forum diskusi, dan
+              kegiatan strategis Forum Komunikasi Dewan Komisaris Bank
+              Pembangunan Daerah Seluruh Indonesia.
+            </p>
+            <!-- Slider Indicators -->
+            <div class="flex items-center gap-4" id="slider-indicators">
+              <div
+                class="indicator h-1.5 w-12 bg-secondary-fixed rounded-full transition-all duration-300"
+              ></div>
+              <div
+                class="indicator h-1.5 w-1.5 bg-white rounded-full opacity-30 transition-all duration-300"
+              ></div>
+              <div
+                class="indicator h-1.5 w-1.5 bg-white rounded-full opacity-30 transition-all duration-300"
+              ></div>
+              <div
+                class="indicator h-1.5 w-1.5 bg-white rounded-full opacity-30 transition-all duration-300"
+              ></div>
+              <div
+                class="indicator h-1.5 w-1.5 bg-white rounded-full opacity-30 transition-all duration-300"
+              ></div>
+              <div
+                class="indicator h-1.5 w-1.5 bg-white rounded-full opacity-30 transition-all duration-300"
+              ></div>
+              <div
+                class="indicator h-1.5 w-1.5 bg-white rounded-full opacity-30 transition-all duration-300"
+              ></div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-background to-transparent z-[2]"
+        ></div>
+      </section>
+      <!-- Gallery Grid Section -->
+      <section class="py-20 px-margin-desktop max-w-container-max mx-auto">
+        <div class="flex flex-wrap justify-center gap-4 mb-16">
+          <button
+            class="px-6 py-2 rounded-full bg-primary text-on-primary font-body-md shadow-md"
+          >
+            Semua Kegiatan
+          </button>
+          <button
+            class="px-6 py-2 rounded-full border border-outline-variant text-on-surface-variant hover:bg-surface-container-high transition-all font-body-md"
+          >
+            Rapat Kerja
+          </button>
+          <button
+            class="px-6 py-2 rounded-full border border-outline-variant text-on-surface-variant hover:bg-surface-container-high transition-all font-body-md"
+          >
+            Seminar Nasional
+          </button>
+          <button
+            class="px-6 py-2 rounded-full border border-outline-variant text-on-surface-variant hover:bg-surface-container-high transition-all font-body-md"
+          >
+            Diskusi Panel
+          </button>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+          <!-- Main Highlight Card -->
+          <div
+            class="md:col-span-8 group relative overflow-hidden rounded-xl custom-shadow gallery-card bg-white"
+          >
+            <img
+              alt="Rakornas"
+              class="w-full h-[450px] object-cover transition-transform duration-700 ease-in-out"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0Z-IhD70X-c291c2-po_mXQlS8Ua4hCDupasOd_fP8TXC0lmLeHNKNRRXMWbg62nbvjOjGtRr4Lm3rJsqoSwWeakphiSWCsG5MkqXgJKsxt6G4JSI9hHEOOJ7b97sLMZrzOVRFalWBAxYnrYDggCupUYKMJKB5F1kIWNLehPKfNXZ1Dzrdkcd8mKsfv-kLCpjetK9Uo7MRBRft5dt0JCmNaNyf7bg25_U8LWUvAIGVUT1O_CNxhPxA0myHaF_ONBxGDDrq7ThNCQv"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-60"
+            ></div>
+            <div class="absolute bottom-0 left-0 p-8 text-white w-full">
+              <span
+                class="text-secondary-fixed font-label-sm uppercase tracking-wider mb-2 block"
+                >Highlight</span
+              >
+              <h3 class="font-headline-lg text-headline-lg mb-2">
+                Rapat Koordinasi Nasional 2024
+              </h3>
+              <div
+                class="flex items-center gap-2 text-on-primary/80 font-body-md"
+              >
+                <span class="material-symbols-outlined text-[18px]"
+                  >calendar_today</span
+                >
+                <span>Maret 2024, Jakarta</span>
+              </div>
+            </div>
+          </div>
+          <!-- Secondary Card -->
+          <div
+            class="md:col-span-4 group relative overflow-hidden rounded-xl custom-shadow gallery-card bg-white"
+          >
+            <img
+              alt="Diskusi Panel"
+              class="w-full h-[450px] object-cover transition-transform duration-700 ease-in-out"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjoBFgrJ7fEMzU4L8_xkOWCZDjt-CSIaY6ENZPYQvuxNqNH4RmluLa5kCDbTBgEiAOgjvaGa8zt3mPexqU71O9SeFDQrpRZQPtsrkzs-OB9Ot0HxVfaetKAvh9X3CpElbF29COQxKpQ-6I9XtvY4WHgcRTkEG3fm0J29SqVX0cm2Ffb1dJrzW83IwR1PnEs5i-A6DqIkg19lCMZr6P__OgD3BGErWDCCDg6FZMVHK_KwRBd3ac1MViKnp5V-AuXHqC2FGAW4T8smUA"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 gallery-overlay transition-opacity duration-300"
+            ></div>
+            <div
+              class="absolute bottom-0 left-0 p-6 text-white w-full opacity-0 gallery-overlay transition-opacity duration-300"
+            >
+              <h4 class="font-headline-md text-headline-md mb-1">
+                Sesi Diskusi Panel
+              </h4>
+              <p class="font-body-md opacity-90">Sinergi Perbankan Daerah</p>
+            </div>
+          </div>
+          <!-- Grid Item 3 -->
+          <div
+            class="md:col-span-4 group relative overflow-hidden rounded-xl custom-shadow gallery-card bg-white"
+          >
+            <img
+              alt="Peserta Seminar"
+              class="w-full h-[300px] object-cover transition-transform duration-700 ease-in-out"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtaUkjR5gyLr_97851rzWz4Nvx53rshj8alwbYpxkIX1A_UOtuIVZcJcmsU0kyLrktrm4Iz2u5U5FtAKcv20KEsQrMM8QY5XXmLsj9XOjheVBMnRFwgMY7N9jCoN2DxX2-b0xW32xxW65TFFOFjeVVTO5K3phvyZGUfMEhOVEye7KNSxKMRGNEOcNgd9sGOMV7Gmi5nOmmwbeoaeUVoaUEkwD9ftpJYwpyczAR-qmgRIUk0tov_HKt_jPUPTtGpTBUl_ohY2_EZfhV"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 gallery-overlay transition-opacity duration-300"
+            ></div>
+            <div
+              class="absolute bottom-0 left-0 p-6 text-white w-full opacity-0 gallery-overlay transition-opacity duration-300"
+            >
+              <h4 class="font-headline-md text-headline-md mb-1">
+                Peserta Seminar
+              </h4>
+              <p class="font-body-md opacity-90">Kehadiran Stakeholder Utama</p>
+            </div>
+          </div>
+          <!-- Grid Item 4 -->
+          <div
+            class="md:col-span-4 group relative overflow-hidden rounded-xl custom-shadow gallery-card bg-white"
+          >
+            <img
+              alt="Diskusi Kelompok"
+              class="w-full h-[300px] object-cover transition-transform duration-700 ease-in-out"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHm2Uk28Mav_7G5ZvseubO4wp3W2RUGhqJzd6XEFtxaKNNuNsQJxQY0MOVvvsSBwbpLvNkNUGEYA91fGLcbQzMsmgZNUIuduwEiE-SOW5ju0Tz0cd3wLC1UybrBxkJEg-SGKWgRC4AEl7J562KlrM-T-xnpIQaSKfIk6uLhLlRR0ogsfj4l8oJxMhNuRRMk2a23ih-9x__lBvcj9wjfKXXIogsBkr-iRE4z6RMM_yFWO0RYTnEWLyESb7qSOE4aXwoMe0cS2IVE_Rg"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 gallery-overlay transition-opacity duration-300"
+            ></div>
+            <div
+              class="absolute bottom-0 left-0 p-6 text-white w-full opacity-0 gallery-overlay transition-opacity duration-300"
+            >
+              <h4 class="font-headline-md text-headline-md mb-1">
+                Diskusi Kelompok
+              </h4>
+              <p class="font-body-md opacity-90">Forum Group Discussion</p>
+            </div>
+          </div>
+          <!-- Grid Item 5 -->
+          <div
+            class="md:col-span-4 group relative overflow-hidden rounded-xl custom-shadow gallery-card bg-white"
+          >
+            <img
+              alt="Paparan Materi"
+              class="w-full h-[300px] object-cover transition-transform duration-700 ease-in-out"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMZD_WJ0ZywtrJGLoEI_nf3ZgaG3HGpon-qLxa9Pa8dLwVHmfscBXp9T70ijlYNzM1SwDcSY9VT0CUub9K-s0WRlcamisu6Uz77wn5O_16J01gP8mirWf3ebXhnK8QMID7vqi2b8E1JaOdOTDg5ErXU2ELMWrrrIexgSNLk-9XT_1Zklb5y9zFekvrBFbZNtv8CLMI4WJDG-OGykAMidpUMhC1zvAKlhS5kQwv0qBw3eYshIow5eWH_6IV_KdFipgoU-bn54LiTciq"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent opacity-0 gallery-overlay transition-opacity duration-300"
+            ></div>
+            <div
+              class="absolute bottom-0 left-0 p-6 text-white w-full opacity-0 gallery-overlay transition-opacity duration-300"
+            >
+              <h4 class="font-headline-md text-headline-md mb-1">
+                Paparan Materi
+              </h4>
+              <p class="font-body-md opacity-90">Penyampaian Kebijakan Baru</p>
+            </div>
+          </div>
+        </div>
+        <div class="mt-20 text-center">
+          <button
+            class="inline-flex items-center gap-2 border-2 border-secondary text-secondary hover:bg-secondary hover:text-on-secondary px-10 py-3 rounded-lg font-bold transition-all duration-300"
+          >
+            Muat Lebih Banyak
+            <span class="material-symbols-outlined">expand_more</span>
+          </button>
+        </div>
+      </section>
+      <!-- Stats Counter Section -->
+      <section class="bg-primary py-20 px-margin-desktop text-on-primary">
+        <div
+          class="max-w-container-max mx-auto grid grid-cols-2 md:grid-cols-4 gap-gutter text-center"
+        >
+          <div>
+            <div class="font-display-lg text-display-lg text-secondary-fixed">
+              150+
+            </div>
+            <div class="font-label-sm uppercase tracking-widest mt-2">
+              Kegiatan Terlaksana
+            </div>
+          </div>
+          <div>
+            <div class="font-display-lg text-display-lg text-secondary-fixed">
+              27
+            </div>
+            <div class="font-label-sm uppercase tracking-widest mt-2">
+              Wilayah Terwakili
+            </div>
+          </div>
+          <div>
+            <div class="font-display-lg text-display-lg text-secondary-fixed">
+              5000+
+            </div>
+            <div class="font-label-sm uppercase tracking-widest mt-2">
+              Arsip Foto
+            </div>
+          </div>
+          <div>
+            <div class="font-display-lg text-display-lg text-secondary-fixed">
+              12
+            </div>
+            <div class="font-label-sm uppercase tracking-widest mt-2">
+              Tahun Kolaborasi
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full py-16 px-margin-desktop bg-primary text-white">
+      <div
+        class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-gutter"
+      >
+        <div class="flex flex-col items-center md:items-start">
+          <span class="font-headline-md text-headline-md mb-2">FKDK BPDSI</span>
+          <p
+            class="text-white/60 max-w-sm text-center md:text-left font-body-md"
+          >
+            Wadah komunikasi strategis Dewan Komisaris Bank Pembangunan Daerah
+            se-Indonesia untuk penguatan tata kelola perbankan nasional.
+          </p>
+        </div>
+        <div class="flex flex-col items-center gap-6">
+          <div class="flex gap-8">
+            <a
+              class="text-white/80 hover:text-white hover:underline transition-all font-body-md"
+              href="#"
+              >Kebijakan Privasi</a
+            >
+            <a
+              class="text-white/80 hover:text-white hover:underline transition-all font-body-md"
+              href="#"
+              >Syarat &amp; Ketentuan</a
+            >
+            <a
+              class="text-white/80 hover:text-white hover:underline transition-all font-body-md"
+              href="#"
+              >Peta Situs</a
+            >
+          </div>
+          <p class="text-white/80 text-center font-body-md">
+            © 2024 Forum Komunikasi Dewan Komisaris Bank Pembangunan Daerah
+            Seluruh Indonesia (FKDK BPDSI). All rights reserved.
+          </p>
+        </div>
+        <div class="flex gap-4">
+          <button
+            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all"
+          >
+            <span class="material-symbols-outlined text-white">share</span>
+          </button>
+          <button
+            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all"
+          >
+            <span class="material-symbols-outlined text-white">mail</span>
+          </button>
+        </div>
+      </div>
+    </footer>
+    <script>
+      // Hero Slider Logic
+      let currentSlide = 0;
+      const slides = document.querySelectorAll(".slide");
+      const indicators = document.querySelectorAll(
+        "#slider-indicators .indicator",
+      );
+
+      function nextSlide() {
+        slides[currentSlide].classList.remove("active");
+
+        // Update indicators visual
+        indicators[currentSlide].classList.remove("w-12", "bg-secondary-fixed");
+        indicators[currentSlide].classList.add(
+          "w-1.5",
+          "bg-white",
+          "opacity-30",
+        );
+
+        currentSlide = (currentSlide + 1) % slides.length;
+
+        slides[currentSlide].classList.add("active");
+
+        // Update next indicator visual
+        indicators[currentSlide].classList.remove(
+          "w-1.5",
+          "bg-white",
+          "opacity-30",
+        );
+        indicators[currentSlide].classList.add("w-12", "bg-secondary-fixed");
+      }
+
+      setInterval(nextSlide, 5000);
+
+      // Scroll Reveal Observer
+      const observerOptions = { threshold: 0.1 };
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("opacity-100", "translate-y-0");
+            entry.target.classList.remove("opacity-0", "translate-y-10");
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll(".gallery-card").forEach((card) => {
+        card.classList.add(
+          "transition-all",
+          "duration-700",
+          "opacity-0",
+          "translate-y-10",
+        );
+        observer.observe(card);
+      });
+    </script>
+  </body>
+</html>
