@@ -170,6 +170,15 @@
         z-index: 0;
       }
     </style>
+
+    <style>
+      .potong-teks {
+        display: -webkit-box;
+        -webkit-line-clamp: 4; /* Menampilkan maksimal 4 baris teks */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+    </style>
   </head>
   <body class="bg-background text-on-surface font-body-md antialiased">
     <!-- TopNavBar -->
@@ -396,6 +405,88 @@
           <!-- 9 logo end -->
         </div>
       </section>
+
+      <!-- Sambutan Section -->
+      <section
+        class="pt-24 bg-surface watermark-bg transition-all duration-700 opacity-100 translate-y-0"
+      >
+        <div
+          class="relative z-10 max-w-container-max mx-auto px-margin-desktop"
+        >
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+            <div class="col-span-5 flex items-end">
+              <div class="">
+                <img src="img/home/image.png" class="w-full h-auto" />
+                <div
+                  class="bg-secondary text-white px-3 py-1 rounded text-label-sm inline-block text-center"
+                >
+                  FKDK BPDSI Wilayah Timur <br />
+                  Victor Abraham Abaidata Koordinator Wilayah | Komisaris
+                  Independen Bank Papua
+                </div>
+              </div>
+            </div>
+            <div class="col-span-7 items-center flex">
+              <div class="">
+                <h2
+                  class="font-headline-lg text-headline-lg text-on-background mb-5"
+                >
+                  Sambutan Semarang, 2 Juni 2026
+                </h2>
+
+                <!-- Tambahkan id="deskripsi" dan class "potong-teks" -->
+                <p
+                  id="deskripsi"
+                  class="text-on-surface-variant font-body-md potong-teks"
+                >
+                  Puji dan syukur kita panjatkan ke hadirat Tuhan Yang Maha
+                  Kuasa, karena atas rahmat dan penyertaan-Nya, Laporan
+                  Pertanggungjawaban Koordinator Wilayah Forum Komunikasi Dewan
+                  Komisaris Bank Pembangunan Daerah Seluruh Indonesia (FKDK
+                  BPDSI) Wilayah Timur Periode 2023–2026 ini dapat disusun dan
+                  disampaikan dalam forum Musyawarah Wilayah (MUSWIL) FKDK BPDSI
+                  Wilayah Timur. <br />
+                  <br />
+                  Laporan ini merupakan bentuk pertanggungjawaban moral,
+                  organisatoris, dan kelembagaan atas amanah kepengurusan yang
+                  dijalankan dalam rangka memperkuat koordinasi, penguatan
+                  kelembagaan, serta kontribusi FKDK BPDSI Wilayah Timur
+                  terhadap penguatan tata kelola dan fungsi pengawasan Bank
+                  Pembangunan Daerah di Wilayah Indonesia Timur. <br />
+                  <br />
+                  Rapat Koordinator Wilayah FKDK BPDSI Wilayah Timur di Bandung,
+                  tanggal 21 Mei 2025, menjadi titik awal amanah kepemimpinan
+                  Koordinator Wilayah periode antar waktu 2023–2026 yang
+                  dipercayakan secara aklamasi oleh seluruh anggota FKDK BPDSI
+                  Wilayah Timur. Dalam masa pengabdian yang relatif singkat (377
+                  hari/ 1 tahun 12 hari), berbagai upaya konsolidasi organisasi,
+                  penguatan komunikasi, dan sinergi kelembagaan terus diupayakan
+                  secara bersama-sama. <br />
+                  <br />
+                  Kami menyadari bahwa pelaksanaan kepengurusan ini masih
+                  memiliki keterbatasan. Namun demikian, kiranya laporan ini
+                  dapat menjadi bahan evaluasi dan refleksi bersama dalam
+                  memperkuat FKDK BPDSI sebagai organisasi profesi Dewan
+                  Komisaris yang profesional, independen, objektif, dan
+                  berintegritas. Akhir kata, kami menyampaikan apresiasi dan
+                  terima kasih kepada seluruh Anggota FKDK BPDSI Wilayah Timur
+                  atas dukungan, kebersamaan, dan kontribusi selama masa
+                  kepengurusan ini.
+                </p>
+
+                <!-- Tambahkan Tombol Baca Selengkapnya -->
+                <button
+                  id="tombol-baca"
+                  class="text-blue-600 hover:text-blue-800 font-bold mt-2 cursor-pointer"
+                >
+                  Baca Selengkapnya
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Sambutan Section end -->
 
       <!-- Logo Bank Section -->
       <section
@@ -924,6 +1015,25 @@
             observer.observe(section);
           }
         });
+      });
+    </script>
+
+    <script>
+      // Mengambil elemen teks dan tombol
+      const teks = document.getElementById("deskripsi");
+      const tombol = document.getElementById("tombol-baca");
+
+      // Menambahkan aksi ketika tombol diklik
+      tombol.addEventListener("click", function () {
+        // Menghapus/menambahkan class 'potong-teks'
+        teks.classList.toggle("potong-teks");
+
+        // Mengubah tulisan pada tombol
+        if (teks.classList.contains("potong-teks")) {
+          tombol.innerText = "Baca Selengkapnya";
+        } else {
+          tombol.innerText = "Sembunyikan Teks";
+        }
       });
     </script>
   </body>
